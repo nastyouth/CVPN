@@ -61,5 +61,4 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
             self.collectionView.reloadData()
         }
     }
-
 }
