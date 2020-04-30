@@ -35,28 +35,19 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
         cell.bgView.layer.borderWidth = 2.0
         cell.bgView.layer.cornerRadius = 15
         
+        cell.checkmark.image = #imageLiteral(resourceName: "Checkmark2")
+        
         if selectedIndex == indexPath.row {
             cell.bgView.layer.backgroundColor = #colorLiteral(red: 0.7496641278, green: 0, blue: 0.003165210597, alpha: 1)
             cell.bgView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             cell.thinView.layer.backgroundColor = #colorLiteral(red: 0.5675660968, green: 0, blue: 0, alpha: 1)
-//            cell.checkmark2.image = #imageLiteral(resourceName: "Checkmark1")
+            cell.checkmark.image = #imageLiteral(resourceName: "Checkmark1")
         } else {
             cell.bgView.layer.backgroundColor = #colorLiteral(red: 0.5669424534, green: 0, blue: 0, alpha: 1)
             cell.bgView.layer.borderColor = #colorLiteral(red: 1, green: 0.893938005, blue: 0.1681821942, alpha: 1)
             cell.thinView.layer.backgroundColor = #colorLiteral(red: 1, green: 0.893938005, blue: 0.1681821942, alpha: 1)
-//            cell.checkmark2.image = #imageLiteral(resourceName: "Checkmark2")
         }
-        
-//        let imageName = "Checkmark.png"
-//        let image = UIImage(named: imageName)
-//        cell.checkmark2 = UIImageView(image: image)
-        
-        cell.checkmark.layer.cornerRadius = 12.5
-        cell.checkmark.layer.borderColor = #colorLiteral(red: 1, green: 0.893938005, blue: 0.1681821942, alpha: 1)
-        cell.checkmark.layer.borderWidth = 2.0
-        cell.checkmark.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
-        
-        
+    
         return cell
     }
 

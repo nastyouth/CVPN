@@ -194,7 +194,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="akn-oP-170">
-                                <rect key="frame" x="16" y="25" width="262" height="25"/>
+                                <rect key="frame" x="16" y="25" width="305" height="25"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCI-rq-Idx">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -205,7 +205,7 @@
                                         <state key="normal" image="back"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать сервер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSh-WI-FCS">
-                                        <rect key="frame" x="81" y="0.0" width="181" height="25"/>
+                                        <rect key="frame" x="81" y="0.0" width="224" height="25"/>
                                         <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -370,7 +370,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-YC-LrZ">
-                                <rect key="frame" x="16" y="25" width="262" height="25"/>
+                                <rect key="frame" x="16" y="25" width="305" height="25"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th0-mZ-FON">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -381,7 +381,7 @@
                                         <state key="normal" image="back"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать сервер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-QA-k0o">
-                                        <rect key="frame" x="81" y="0.0" width="181" height="25"/>
+                                        <rect key="frame" x="81" y="0.0" width="224" height="25"/>
                                         <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -394,7 +394,7 @@
                                 <color key="backgroundColor" red="0.47594428059999999" green="0.087270669640000006" blue="0.050925299530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETUP YOUR VPN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-lf-CM0">
-                                <rect key="frame" x="100.5" y="82" width="174" height="48"/>
+                                <rect key="frame" x="63.5" y="82" width="248.5" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="Cbd-rX-r7t"/>
                                     <constraint firstAttribute="height" constant="48" id="OUp-Xa-jYB"/>
@@ -541,7 +541,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="mHu-JA-WUJ">
-                                        <rect key="frame" x="16" y="13" width="25" height="25"/>
+                                        <rect key="frame" x="5" y="12.5" width="25" height="25"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6C0-ro-xun">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -554,7 +554,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подписка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpE-fb-1sd">
-                                        <rect key="frame" x="132" y="8" width="111" height="34.5"/>
+                                        <rect key="frame" x="121" y="8" width="133.5" height="34"/>
                                         <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -567,7 +567,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="oli-n8-NGI">
-                                        <rect key="frame" x="157" y="59" width="168" height="47"/>
+                                        <rect key="frame" x="157" y="58.5" width="168" height="47"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Первые 7 дней бесплатно" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FQ-6Y-yf3">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="16"/>
@@ -628,13 +628,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="78"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Недельняя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2l-XB-VEa">
-                                                            <rect key="frame" x="18" y="29" width="72" height="20"/>
+                                                            <rect key="frame" x="18" y="29" width="87" height="20"/>
                                                             <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8IB-Iw-9S6">
-                                                            <rect key="frame" x="111" y="0.0" width="2" height="78"/>
+                                                            <rect key="frame" x="126" y="0.0" width="2" height="78"/>
                                                             <color key="backgroundColor" red="0.9837680459" green="0.89774513239999998" blue="0.3409781456" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="78" id="YVg-3e-Uuz"/>
@@ -682,14 +682,6 @@
                                                         <constraint firstAttribute="width" constant="154" id="dS5-ZA-ory"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgN-A1-Gm1">
-                                                    <rect key="frame" x="281" y="26.5" width="25" height="25"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="TEd-yo-Qlf"/>
-                                                        <constraint firstAttribute="width" constant="25" id="cSz-DG-L2H"/>
-                                                    </constraints>
-                                                </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkmark2" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-M3-I03">
                                                     <rect key="frame" x="281" y="26" width="25" height="25"/>
                                                     <constraints>
@@ -705,17 +697,14 @@
                                                 <constraint firstItem="vt1-7b-6rN" firstAttribute="centerY" secondItem="17H-ro-Tcl" secondAttribute="centerY" id="Hux-J4-RhO"/>
                                                 <constraint firstAttribute="trailing" secondItem="eCa-M3-I03" secondAttribute="trailing" constant="28" id="UIT-hd-iPd"/>
                                                 <constraint firstAttribute="trailing" secondItem="SP5-He-3u0" secondAttribute="trailing" constant="15" id="Vd9-DO-z2O"/>
-                                                <constraint firstItem="TgN-A1-Gm1" firstAttribute="centerY" secondItem="17H-ro-Tcl" secondAttribute="centerY" id="owy-hA-48M"/>
                                                 <constraint firstItem="eCa-M3-I03" firstAttribute="top" secondItem="SP5-He-3u0" secondAttribute="bottom" constant="13" id="r3P-zg-e4O"/>
                                                 <constraint firstAttribute="bottom" secondItem="eCa-M3-I03" secondAttribute="bottom" constant="27" id="vhF-sY-lUE"/>
-                                                <constraint firstAttribute="trailing" secondItem="TgN-A1-Gm1" secondAttribute="trailing" constant="28" id="zvl-TT-XJ3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="334" height="78"/>
                                         <connections>
                                             <outlet property="bgView" destination="vt1-7b-6rN" id="akx-aR-epc"/>
-                                            <outlet property="checkmark" destination="TgN-A1-Gm1" id="sbG-Lb-95Q"/>
-                                            <outlet property="checkmark2" destination="eCa-M3-I03" id="ODi-Xe-8el"/>
+                                            <outlet property="checkmark" destination="eCa-M3-I03" id="G7E-zX-ksJ"/>
                                             <outlet property="dieWithPromotion" destination="SP5-He-3u0" id="pWV-7M-qMy"/>
                                             <outlet property="purchaseType" destination="B2l-XB-VEa" id="Kd7-5l-2TO"/>
                                             <outlet property="thinView" destination="8IB-Iw-9S6" id="c4p-KE-Dwj"/>
