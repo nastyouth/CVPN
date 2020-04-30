@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -69,6 +70,9 @@
                                         <real key="value" value="49"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="connectToVPN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q23-fb-bWB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZO-Eo-y9f" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
                                 <rect key="frame" x="53" y="553" width="269" height="50"/>
@@ -125,17 +129,29 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ith-AG-E9U">
+                                <rect key="frame" x="60" y="24" width="254" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="2ZP-Hx-4oo"/>
+                                    <constraint firstAttribute="height" constant="21" id="VFc-Wm-KUf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.51887947320000005" green="0.095200128849999996" blue="0.05876409262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="2UA-GI-D7G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1FM-wg-rPS"/>
                             <constraint firstItem="2ZO-Eo-y9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="1h9-c6-q85"/>
                             <constraint firstItem="wTI-0L-i05" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="66h-wK-Kop"/>
+                            <constraint firstItem="ith-AG-E9U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="8X1-mx-k0T"/>
                             <constraint firstItem="wTI-0L-i05" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HMb-ZW-INM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ZO-Eo-y9f" secondAttribute="trailing" constant="53" id="MKo-mO-DZo"/>
                             <constraint firstItem="2UA-GI-D7G" firstAttribute="top" secondItem="wTI-0L-i05" secondAttribute="bottom" constant="15" id="S2D-m9-QJp"/>
                             <constraint firstItem="AbM-Ur-Ahq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="UAZ-3Q-9jc"/>
                             <constraint firstItem="AbM-Ur-Ahq" firstAttribute="top" secondItem="ZWp-Pb-gSs" secondAttribute="bottom" constant="22" id="cs9-Y0-yex"/>
+                            <constraint firstItem="ith-AG-E9U" firstAttribute="leading" secondItem="wTI-0L-i05" secondAttribute="trailing" constant="19" id="e9m-Rd-xsj"/>
                             <constraint firstItem="N45-h7-eRg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="erB-zS-WlT"/>
                             <constraint firstItem="N45-h7-eRg" firstAttribute="top" secondItem="2UA-GI-D7G" secondAttribute="bottom" constant="26" id="jaH-gZ-Jsd"/>
                             <constraint firstItem="2ZO-Eo-y9f" firstAttribute="top" secondItem="AbM-Ur-Ahq" secondAttribute="bottom" constant="24" id="l4O-9C-oHy"/>
@@ -143,6 +159,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="connectButton" destination="AbM-Ur-Ahq" id="aJE-k3-cPL"/>
+                        <outlet property="connectStatus" destination="ith-AG-E9U" id="7tn-n7-UkX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

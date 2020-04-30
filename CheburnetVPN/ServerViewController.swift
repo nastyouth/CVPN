@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NetworkExtension
 
 class ServerViewController: UIViewController {
 
@@ -28,10 +29,6 @@ extension ServerViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ServerCell
-        
-//        if (indexPath.row % 2 == 0) {
-//            cell.textLabel?.backgroundColor = #colorLiteral(red: 0.5590366721, green: 0.003212237963, blue: 0.001324095065, alpha: 1)
-//        }
         return cell
     }
 }

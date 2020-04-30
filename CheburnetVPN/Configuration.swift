@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import KeychainSwift
 
 class Configuration {
     static let SERVER_KEY = "SERVER_KEY"
@@ -22,29 +21,16 @@ class Configuration {
     public let server: String
     public let account: String
     public let password: String
-    public let onDemand: Bool
-    public let psk: String?
-    public var pskEnabled: Bool {
-        return psk != nil
-    }
     
-    init(server: String, account: String, password: String, onDemand: Bool = false, psk: String? = nil) {
+    init(server: String, account: String, password: String) {
         self.server = server
         self.account = account
         self.password = password
-        self.onDemand = onDemand
-        self.psk = psk
     }
     
     func getPasswordRef() -> Data? {
         KeychainWrapper.standard.set(password, forKey: Configuration.KEYCHAIN_PASSWORD_KEY)
         return KeychainWrapper.standard.dataRef(forKey: Configuration.KEYCHAIN_PASSWORD_KEY)
-    }
-    func getPSKRef() -> Data? {
-        if psk == nil { return nil }
-        
-        KeychainWrapper.standard.set(psk!, forKey: Configuration.KEYCHAIN_PSK_KEY)
-        return KeychainWrapper.standard.dataRef(forKey: Configuration.KEYCHAIN_PSK_KEY)
     }
     
     static func loadFromDefaults() -> Configuration {
@@ -52,22 +38,16 @@ class Configuration {
         let server = def.string(forKey: Configuration.SERVER_KEY) ?? ""
         let account = def.string(forKey: Configuration.ACCOUNT_KEY) ?? ""
         let password = def.string(forKey: Configuration.PASSWORD_KEY) ?? ""
-        let onDemand = def.bool(forKey: Configuration.ONDEMAND_KEY)
-        let psk = def.string(forKey: Configuration.PSK_KEY)
         return Configuration(
             server: server,
             account: account,
-            password: password,
-            onDemand: onDemand,
-            psk: psk
-        )
+            password: password)
     }
+    
     func saveToDefaults() {
         let def = UserDefaults.standard
         def.set(server, forKey: Configuration.SERVER_KEY)
         def.set(account, forKey: Configuration.ACCOUNT_KEY)
         def.set(password, forKey: Configuration.PASSWORD_KEY)
-        def.set(onDemand, forKey: Configuration.ONDEMAND_KEY)
-        def.set(psk, forKey: Configuration.PSK_KEY)
     }
 }
