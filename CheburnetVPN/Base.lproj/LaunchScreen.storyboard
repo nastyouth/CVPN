@@ -1,77 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MASTODON.TTF">
-            <string>Mastodon-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="9Kt-KR-0TG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4ЕБУРNET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xps-K2-nde">
-                                <rect key="frame" x="114" y="477" width="186" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="nnl-SH-8iT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="52"/>
-                                <color key="textColor" red="0.96798652409999997" green="0.80340069530000002" blue="0.2742965221" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VPN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqp-XM-bPd">
-                                <rect key="frame" x="114.5" y="528" width="185.5" height="108"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="LnB-Ls-ElG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="143"/>
-                                <color key="textColor" red="0.80778473620000002" green="0.16987973449999999" blue="0.16072523590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Заставка" translatesAutoresizingMaskIntoConstraints="NO" id="Riq-OA-qhb">
-                                <rect key="frame" x="54.5" y="153" width="305" height="305"/>
+                                <rect key="frame" x="35" y="109" width="305" height="305"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="305" id="FD5-63-9Pa"/>
                                     <constraint firstAttribute="width" constant="305" id="tR3-5U-RjY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OTi-ig-xKD">
+                                <rect key="frame" x="87" y="433" width="201" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="Zgd-Fm-4tk"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9Kt-KR-0TG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="05X-S3-aPC"/>
-                            <constraint firstItem="Sqp-XM-bPd" firstAttribute="top" secondItem="Xps-K2-nde" secondAttribute="bottom" constant="8" id="7g2-vC-NEm"/>
-                            <constraint firstItem="Xps-K2-nde" firstAttribute="top" secondItem="Riq-OA-qhb" secondAttribute="bottom" constant="19" id="A63-HN-fcI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OTi-ig-xKD" secondAttribute="trailing" constant="87" id="Dhp-FB-blQ"/>
                             <constraint firstItem="9Kt-KR-0TG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fc8-2X-aHf"/>
                             <constraint firstItem="Riq-OA-qhb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="109" id="MqM-8n-NJA"/>
-                            <constraint firstItem="Sqp-XM-bPd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aem-Sl-WTQ"/>
+                            <constraint firstItem="OTi-ig-xKD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="b51-5x-xYB"/>
                             <constraint firstItem="9Kt-KR-0TG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="czD-C4-xd2"/>
                             <constraint firstItem="9Kt-KR-0TG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nqu-Bz-sJ7"/>
                             <constraint firstItem="Riq-OA-qhb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pmu-do-HUc"/>
-                            <constraint firstItem="Xps-K2-nde" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yY9-so-r41"/>
+                            <constraint firstItem="OTi-ig-xKD" firstAttribute="top" secondItem="Riq-OA-qhb" secondAttribute="bottom" constant="19" id="qbS-2U-xhj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
         </scene>
     </scenes>
     <resources>
         <image name="Bg" width="1500.5" height="2668.5"/>
+        <image name="Logo" width="689" height="604"/>
         <image name="Заставка" width="1395" height="1387"/>
     </resources>
 </document>
