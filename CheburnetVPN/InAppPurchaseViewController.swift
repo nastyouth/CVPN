@@ -14,6 +14,9 @@ class InAppPurchaseViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedIndex = 1
     
+    let purchaseType = ["Недельная", "Месячная", "Годовая"]
+    let purchasePrice = ["699.88", "849.88", "5 499.88"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -32,6 +35,9 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "purchaseCell", for: indexPath) as! PurchaseCollectionViewCell
+        
+        cell.purchaseType.text = purchaseType[indexPath.row]
+        cell.purchasePrice.text = purchasePrice[indexPath.row]
         
         cell.dieWithPromotion.backgroundColor = #colorLiteral(red: 1, green: 0.7955260277, blue: 0.01263210829, alpha: 1)
         cell.dieWithPromotion.layer.borderWidth = 1.0

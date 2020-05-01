@@ -11,6 +11,7 @@ import UIKit
 class PurchaseCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var purchaseType: UILabel!
+    @IBOutlet weak var purchasePrice: UILabel!
     @IBOutlet weak var thinView: UIView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var dieWithPromotion: UIView!
