@@ -37,7 +37,7 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "purchaseCell", for: indexPath) as! PurchaseCollectionViewCell
         
         cell.purchaseType.text = purchaseType[indexPath.row]
-        cell.purchasePrice.text = purchasePrice[indexPath.row]
+        cell.purchasePrice.text = purchasePrice[indexPath.row] + " Р"
         
         cell.dieWithPromotion.backgroundColor = #colorLiteral(red: 1, green: 0.7955260277, blue: 0.01263210829, alpha: 1)
         cell.dieWithPromotion.layer.borderWidth = 1.0
