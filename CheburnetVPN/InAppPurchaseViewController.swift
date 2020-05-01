@@ -18,6 +18,10 @@ class InAppPurchaseViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
     }
+    
+    @IBAction func cancel(_ sender: Any) {
+         dismiss(animated: true, completion: nil)
+    }
 }
 
 extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

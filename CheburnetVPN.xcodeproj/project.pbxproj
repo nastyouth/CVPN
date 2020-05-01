@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,13 +13,13 @@
 		5D4085D6245B69F000277226 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4085D5245B69F000277226 /* Observer.swift */; };
 		5D4085D8245B6DB400277226 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4085D7245B6DB400277226 /* KeychainWrapper.swift */; };
 		5D4085DB245B740200277226 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4085DA245B740200277226 /* NetworkExtension.framework */; };
+		5D4085DF245C41C200277226 /* MASTODON.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5D4085DC245C41C200277226 /* MASTODON.TTF */; };
+		5D4085E0245C41C200277226 /* POBEDA-BOLD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5D4085DD245C41C200277226 /* POBEDA-BOLD.TTF */; };
+		5D4085E1245C41C200277226 /* POBEDA-REGULAR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5D4085DE245C41C200277226 /* POBEDA-REGULAR.TTF */; };
 		5D8BC56E245835C4008218E6 /* InAppPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */; };
 		5D8BC57024583BB4008218E6 /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */; };
 		5DC3242C24571C440079766A /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3242B24571C440079766A /* ServerCell.swift */; };
 		5DC3242E24571E7D0079766A /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3242D24571E7D0079766A /* SegmentedControl.swift */; };
-		5DC3242F24572D4F0079766A /* MASTODON.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5DECCAA02456F2F600D45308 /* MASTODON.TTF */; };
-		5DC3243024572D550079766A /* POBEDA-BOLD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5DECCA9E2456F2F600D45308 /* POBEDA-BOLD.TTF */; };
-		5DC3243124572D570079766A /* POBEDA-REGULAR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5DECCA9F2456F2F600D45308 /* POBEDA-REGULAR.TTF */; };
 		5DECCA8A2456EE1400D45308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECCA892456EE1400D45308 /* AppDelegate.swift */; };
 		5DECCA8C2456EE1400D45308 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECCA8B2456EE1400D45308 /* SceneDelegate.swift */; };
 		5DECCA8E2456EE1400D45308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECCA8D2456EE1400D45308 /* ViewController.swift */; };
@@ -39,6 +39,9 @@
 		5D4085D7245B6DB400277226 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		5D4085D9245B740200277226 /* CheburnetVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheburnetVPN.entitlements; sourceTree = "<group>"; };
 		5D4085DA245B740200277226 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		5D4085DC245C41C200277226 /* MASTODON.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = MASTODON.TTF; sourceTree = "<group>"; };
+		5D4085DD245C41C200277226 /* POBEDA-BOLD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "POBEDA-BOLD.TTF"; sourceTree = "<group>"; };
+		5D4085DE245C41C200277226 /* POBEDA-REGULAR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "POBEDA-REGULAR.TTF"; sourceTree = "<group>"; };
 		5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseViewController.swift; sourceTree = "<group>"; };
 		5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		5DC3242B24571C440079766A /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
@@ -51,9 +54,6 @@
 		5DECCA922456EE1600D45308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DECCA952456EE1600D45308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DECCA972456EE1600D45308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DECCA9E2456F2F600D45308 /* POBEDA-BOLD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "POBEDA-BOLD.TTF"; path = "../../../../../Downloads/Cheburnet Materials/POBEDA-BOLD.TTF"; sourceTree = "<group>"; };
-		5DECCA9F2456F2F600D45308 /* POBEDA-REGULAR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "POBEDA-REGULAR.TTF"; path = "../../../../../Downloads/Cheburnet Materials/POBEDA-REGULAR.TTF"; sourceTree = "<group>"; };
-		5DECCAA02456F2F600D45308 /* MASTODON.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = MASTODON.TTF; path = "../../../../../Downloads/Cheburnet Materials/MASTODON.TTF"; sourceTree = "<group>"; };
 		5DECCAA12456F56900D45308 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5DECCAA32457018E00D45308 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5DECCAA52457128100D45308 /* ServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewController.swift; sourceTree = "<group>"; };
@@ -124,9 +124,9 @@
 				5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */,
 				5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */,
 				5DECCA8F2456EE1400D45308 /* Main.storyboard */,
+				5DECCA942456EE1600D45308 /* LaunchScreen.storyboard */,
 				5DECCA922456EE1600D45308 /* Assets.xcassets */,
 				5DECCAA12456F56900D45308 /* Colors.xcassets */,
-				5DECCA942456EE1600D45308 /* LaunchScreen.storyboard */,
 				5DECCA972456EE1600D45308 /* Info.plist */,
 				5DECCA9D2456F2E900D45308 /* Fonts */,
 			);
@@ -136,9 +136,9 @@
 		5DECCA9D2456F2E900D45308 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				5DECCAA02456F2F600D45308 /* MASTODON.TTF */,
-				5DECCA9E2456F2F600D45308 /* POBEDA-BOLD.TTF */,
-				5DECCA9F2456F2F600D45308 /* POBEDA-REGULAR.TTF */,
+				5D4085DC245C41C200277226 /* MASTODON.TTF */,
+				5D4085DD245C41C200277226 /* POBEDA-BOLD.TTF */,
+				5D4085DE245C41C200277226 /* POBEDA-REGULAR.TTF */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -203,10 +203,10 @@
 			files = (
 				5DECCA962456EE1600D45308 /* LaunchScreen.storyboard in Resources */,
 				5DECCAA22456F56900D45308 /* Colors.xcassets in Resources */,
-				5DC3242F24572D4F0079766A /* MASTODON.TTF in Resources */,
+				5D4085DF245C41C200277226 /* MASTODON.TTF in Resources */,
 				5DECCA932456EE1600D45308 /* Assets.xcassets in Resources */,
-				5DC3243024572D550079766A /* POBEDA-BOLD.TTF in Resources */,
-				5DC3243124572D570079766A /* POBEDA-REGULAR.TTF in Resources */,
+				5D4085E0245C41C200277226 /* POBEDA-BOLD.TTF in Resources */,
+				5D4085E1245C41C200277226 /* POBEDA-REGULAR.TTF in Resources */,
 				5DECCA912456EE1400D45308 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
