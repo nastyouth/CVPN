@@ -14,8 +14,9 @@ class InAppPurchaseViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedIndex = 1
     
-    let purchaseType = ["Недельная", "Месячная", "Годовая"]
-    let purchasePrice = ["699.88", "849.88", "5 499.88"]
+    let purchaseTypesArray = ["Недельная", "Месячная", "Годовая"]
+    let purchasePricesArray = ["699.88", "849.88", "5 499.88"]
+    let namesDieWithPromotionArray = ["", "Самый популярный", "Самый дешевый"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +37,16 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "purchaseCell", for: indexPath) as! PurchaseCollectionViewCell
         
-        cell.purchaseType.text = purchaseType[indexPath.row]
-        cell.purchasePrice.text = purchasePrice[indexPath.row] + " Р"
+        cell.purchaseType.text = purchaseTypesArray[indexPath.row]
+        cell.purchasePrice.text = purchasePricesArray[indexPath.row] + " Р"
+        cell.nameDieWithPromotion.text = namesDieWithPromotionArray[indexPath.row]
+
+        switch indexPath.row {
+        case 0:
+            cell.dieWithPromotion.isHidden = true
+        default:
+            cell.dieWithPromotion.isHidden = false
+        }
         
         cell.dieWithPromotion.backgroundColor = #colorLiteral(red: 1, green: 0.7955260277, blue: 0.01263210829, alpha: 1)
         cell.dieWithPromotion.layer.borderWidth = 1.0

@@ -675,11 +675,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SP5-He-3u0">
                                                     <rect key="frame" x="165" y="-12" width="154" height="25"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Самое выгодное" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIu-Em-HmX">
-                                                            <rect key="frame" x="27" y="4.5" width="100" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Самое выгодное" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIu-Em-HmX">
+                                                            <rect key="frame" x="31" y="4.5" width="92" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16" id="Y6X-J1-CmY"/>
-                                                                <constraint firstAttribute="width" constant="100" id="qhM-S5-hYr"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <color key="textColor" red="0.4336334074" green="0.078306596419999999" blue="0.049860139460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -692,6 +691,7 @@
                                                         <constraint firstItem="iIu-Em-HmX" firstAttribute="centerY" secondItem="SP5-He-3u0" secondAttribute="centerY" id="QTK-wo-Trj"/>
                                                         <constraint firstAttribute="height" constant="25" id="bge-5m-UhN"/>
                                                         <constraint firstAttribute="width" constant="154" id="dS5-ZA-ory"/>
+                                                        <constraint firstItem="iIu-Em-HmX" firstAttribute="centerY" secondItem="SP5-He-3u0" secondAttribute="centerY" id="klj-0r-S4b"/>
                                                     </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkmark2" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-M3-I03">
@@ -726,6 +726,7 @@
                                             <outlet property="bgView" destination="vt1-7b-6rN" id="akx-aR-epc"/>
                                             <outlet property="checkmark" destination="eCa-M3-I03" id="G7E-zX-ksJ"/>
                                             <outlet property="dieWithPromotion" destination="SP5-He-3u0" id="pWV-7M-qMy"/>
+                                            <outlet property="nameDieWithPromotion" destination="iIu-Em-HmX" id="gCb-bg-38N"/>
                                             <outlet property="purchasePrice" destination="rAz-AZ-kqs" id="h6W-hY-Hif"/>
                                             <outlet property="purchaseType" destination="B2l-XB-VEa" id="Kd7-5l-2TO"/>
                                             <outlet property="thinView" destination="8IB-Iw-9S6" id="c4p-KE-Dwj"/>
