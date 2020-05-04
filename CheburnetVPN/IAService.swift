@@ -34,6 +34,10 @@ class IAService: NSObject {
             let payment = SKPayment(product: productToPurchase)
             paymentQueue.add(payment)
     }
+    
+    func restorePurchases() {
+        paymentQueue.restoreCompletedTransactions()
+    }
 }
 
 extension IAService: SKProductsRequestDelegate {
@@ -48,8 +52,9 @@ extension IAService: SKProductsRequestDelegate {
 extension IAService: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
-            print(transactions[0].error)
+            print(transactions[0].error ?? "Ошибки транзакции нет!")
             print(transaction .transactionState.status(), transaction.payment.productIdentifier)
+            
             switch transaction.transactionState {
             case .purchasing: break
             default: queue.finishTransaction(transaction)

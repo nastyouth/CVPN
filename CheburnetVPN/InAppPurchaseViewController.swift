@@ -22,6 +22,7 @@ class InAppPurchaseViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         IAService.shared.getProducts()
+        IAService.shared.restorePurchases()
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -33,7 +34,7 @@ class InAppPurchaseViewController: UIViewController {
         case 0: IAService.shared.purchase(product: .weekPurchase)
         case 1: IAService.shared.purchase(product: .monthPurchase)
         case 2: IAService.shared.purchase(product: .yearPurchase)
-        default: break
+        default: IAService.shared.restorePurchases()
         }
     }
 }

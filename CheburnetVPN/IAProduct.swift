@@ -9,7 +9,7 @@
 import Foundation
 
 enum IAProduct: String {
-    case weekPurchase = "nastyouth.CheburnetVPN.week"
-    case monthPurchase = "nastyouth.CheburnetVPN.month"
-    case yearPurchase = "nastyouth.CheburnetVPN.year"
+    case weekPurchase = "nastyouth.CheburnetVPN.weekPurchase"
+    case monthPurchase = "nastyouth.CheburnetVPN.monthPurchase"
+    case yearPurchase = "nastyouth.CheburnetVPN.yearPurchase"
 }
