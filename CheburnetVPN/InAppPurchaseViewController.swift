@@ -21,10 +21,20 @@ class InAppPurchaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        IAService.shared.getProducts()
     }
     
     @IBAction func cancel(_ sender: Any) {
          dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func payment(_ sender: Any) {
+        switch selectedIndex {
+        case 0: IAService.shared.purchase(product: .weekPurchase)
+        case 1: IAService.shared.purchase(product: .monthPurchase)
+        case 2: IAService.shared.purchase(product: .yearPurchase)
+        default: break
+        }
     }
 }
 
