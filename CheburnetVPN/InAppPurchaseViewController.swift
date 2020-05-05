@@ -30,6 +30,7 @@ class InAppPurchaseViewController: UIViewController {
     }
     
     @IBAction func payment(_ sender: Any) {
+        IAService.shared.logEventInAppPurchase()
         switch selectedIndex {
         case 0: IAService.shared.purchase(product: .weekPurchase)
         case 1: IAService.shared.purchase(product: .monthPurchase)

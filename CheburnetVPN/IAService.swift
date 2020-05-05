@@ -8,6 +8,7 @@
 
 import Foundation
 import StoreKit
+import Firebase
 
 class IAService: NSObject {
     
@@ -38,6 +39,10 @@ class IAService: NSObject {
     func restorePurchases() {
         paymentQueue.restoreCompletedTransactions()
     }
+    
+    func logEventInAppPurchase() {
+        Analytics.logEvent("\(LogEvents.inAppPurchaseButtonPressed.rawValue)", parameters: nil)
+    }
 }
 
 extension IAService: SKProductsRequestDelegate {
@@ -54,7 +59,6 @@ extension IAService: SKPaymentTransactionObserver {
         for transaction in transactions {
             print(transactions[0].error ?? "Ошибки транзакции нет!")
             print(transaction .transactionState.status(), transaction.payment.productIdentifier)
-            
             switch transaction.transactionState {
             case .purchasing: break
             default: queue.finishTransaction(transaction)
