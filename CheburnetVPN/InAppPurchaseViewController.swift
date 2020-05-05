@@ -12,11 +12,11 @@ import StoreKit
 class InAppPurchaseViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var selectedIndex = 1
+    var selectedIndex = 0
     
     let purchaseTypesArray = ["Недельная", "Месячная", "Годовая"]
     let purchasePricesArray = ["699.88", "849.88", "5 499.88"]
-    let namesDieWithPromotionArray = ["", "Самый популярный", "Самый дешевый"]
+    let namesDieWithPromotionArray = ["", "Самый популярный", "Самое выгодное"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +54,8 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
 
         switch indexPath.row {
         case 0:
+            cell.dieWithPromotion.isHidden = true
+        case 1:
             cell.dieWithPromotion.isHidden = true
         default:
             cell.dieWithPromotion.isHidden = false
