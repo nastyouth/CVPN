@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="50" id="ZMg-MW-QpY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
-                                <state key="normal" title="БОЛЕЕ БЫСТРОЕ СОЕДИНЕНИЕ">
+                                <state key="normal" title="выбрать сервер">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
