@@ -16,7 +16,7 @@ class InAppPurchaseViewController: UIViewController {
     
     let purchaseTypesArray = ["Недельная", "Месячная", "Годовая"]
     let purchasePricesArray = ["699.88", "849.88", "5 499.88"]
-    let namesDieWithPromotionArray = ["", "Самый популярный", "Самое выгодное"]
+    let namesDieWithPromotionArray = ["", "Самый популярный", "Самый дешевый"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,30 +56,36 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
         switch indexPath.row {
         case 0:
             cell.dieWithPromotion.isHidden = true
-        case 1:
-            cell.dieWithPromotion.isHidden = true
         default:
             cell.dieWithPromotion.isHidden = false
         }
         
         cell.dieWithPromotion.backgroundColor = #colorLiteral(red: 1, green: 0.7955260277, blue: 0.01263210829, alpha: 1)
-        cell.dieWithPromotion.layer.borderWidth = 1.0
+        cell.dieWithPromotion.layer.borderWidth = 2.0
         cell.dieWithPromotion.layer.cornerRadius = 12.5
+        cell.dieWithPromotion.layer.borderColor = #colorLiteral(red: 0.5675660968, green: 0, blue: 0, alpha: 1)
         
         cell.bgView.layer.borderWidth = 2.0
         cell.bgView.layer.cornerRadius = 15
         
-        cell.checkmark.image = #imageLiteral(resourceName: "Checkmark2")
-        
+        cell.checkmark.layer.cornerRadius = 12.5
+        cell.checkmark.backgroundColor = #colorLiteral(red: 0.5675660968, green: 0, blue: 0, alpha: 1)
+        cell.checkmark.layer.borderColor = #colorLiteral(red: 1, green: 0.7955260277, blue: 0.01263210829, alpha: 1)
+        cell.checkmark.layer.borderWidth = 2.0
+        cell.circleInsideOfCheckmark.backgroundColor = #colorLiteral(red: 0.5675660968, green: 0, blue: 0, alpha: 1)
+        cell.circleInsideOfCheckmark.layer.cornerRadius = 5.5
+
         if selectedIndex == indexPath.row {
+            cell.circleInsideOfCheckmark.backgroundColor = #colorLiteral(red: 1, green: 0.7955260277, blue: 0.01263210829, alpha: 1)
+            cell.checkmark.layer.borderColor = UIColor.clear.cgColor
             cell.bgView.layer.backgroundColor = #colorLiteral(red: 0.7496641278, green: 0, blue: 0.003165210597, alpha: 1)
-            cell.bgView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.bgView.layer.borderColor = #colorLiteral(red: 0.5675660968, green: 0, blue: 0, alpha: 1)
             cell.thinView.layer.backgroundColor = #colorLiteral(red: 0.5675660968, green: 0, blue: 0, alpha: 1)
-            cell.checkmark.image = #imageLiteral(resourceName: "Checkmark1")
         } else {
+            cell.circleInsideOfCheckmark.backgroundColor = #colorLiteral(red: 0.5675660968, green: 0, blue: 0, alpha: 1)
             cell.bgView.layer.backgroundColor = #colorLiteral(red: 0.5669424534, green: 0, blue: 0, alpha: 1)
-            cell.bgView.layer.borderColor = #colorLiteral(red: 1, green: 0.893938005, blue: 0.1681821942, alpha: 1)
-            cell.thinView.layer.backgroundColor = #colorLiteral(red: 1, green: 0.893938005, blue: 0.1681821942, alpha: 1)
+            cell.bgView.layer.borderColor = #colorLiteral(red: 1, green: 0.7955260277, blue: 0.01263210829, alpha: 1)
+            cell.thinView.layer.backgroundColor = #colorLiteral(red: 1, green: 0.7955260277, blue: 0.01263210829, alpha: 1)
         }
     
         return cell

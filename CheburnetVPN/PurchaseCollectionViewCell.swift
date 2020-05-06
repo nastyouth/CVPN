@@ -16,5 +16,6 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var dieWithPromotion: UIView!
     @IBOutlet weak var nameDieWithPromotion: UILabel!
-    @IBOutlet weak var checkmark: UIImageView!
+    @IBOutlet weak var checkmark: UIView!
+    @IBOutlet weak var circleInsideOfCheckmark: UIView!
 }
