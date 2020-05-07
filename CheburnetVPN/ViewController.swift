@@ -14,12 +14,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var connectStatus: UILabel!
     @IBOutlet weak var connectButton: customButton!
     
+    var isAllowed: Bool = true
+    
+    var isPresentSetupVPN: Bool = false
+    let userDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         vpnStateChanged(status: VPNManager.shared.status)
         VPNManager.shared.statusEvent.attach(self, ViewController.vpnStateChanged)
     }
     
+    func segueToSetupYourVPNVC() {
+        self.performSegue(withIdentifier: "setupYourVPN", sender: self)
+    }
+    
+    func checkIsAllowConnectToVPN() {
+        
+        
+        if !isAllowed {
+            segueToSetupYourVPNVC()
+            isAllowed = userDefaults.bool(forKey: "isAllowed")
+            print(isAllowed)
+        }
+    }
+
     func vpnStateChanged(status: NEVPNStatus) {
         switch status {
         case .disconnected, .invalid, .reasserting:
@@ -44,10 +63,17 @@ class ViewController: UIViewController {
                 server: "ikev2.korzh.pro",
                 account: "nano",
                 password: "nanonano")
-            VPNManager.shared.connectIKEv2(config: config) { error in
-                let alert = UIAlertController(title: "Ошибка!", message: error, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            if !isAllowed {
+                segueToSetupYourVPNVC()
             }
+            
+            VPNManager.shared.connectIKEv2(config: config) { error in
+                self.isAllowed = false
+                self.userDefaults.set(false, forKey: "isAllowed")
+                self.isAllowed = self.userDefaults.bool(forKey: "isAllowed")
+            }
+            
             config.saveToDefaults()
         } else {
             VPNManager.shared.disconnect()

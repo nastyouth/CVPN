@@ -121,8 +121,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ith-AG-E9U">
-                                <rect key="frame" x="60" y="24" width="254" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ith-AG-E9U">
+                                <rect key="frame" x="80" y="24" width="254" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="254" id="2ZP-Hx-4oo"/>
                                     <constraint firstAttribute="height" constant="21" id="VFc-Wm-KUf"/>
@@ -144,6 +144,7 @@
                             <constraint firstItem="N45-h7-eRg" firstAttribute="top" secondItem="2UA-GI-D7G" secondAttribute="bottom" constant="26" id="jaH-gZ-Jsd"/>
                             <constraint firstItem="2ZO-Eo-y9f" firstAttribute="top" secondItem="AbM-Ur-Ahq" secondAttribute="bottom" constant="24" id="l4O-9C-oHy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AbM-Ur-Ahq" secondAttribute="trailing" constant="53" id="tNU-rw-Y7D"/>
+                            <constraint firstItem="ith-AG-E9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tTO-co-JZE"/>
                             <constraint firstItem="2UA-GI-D7G" firstAttribute="top" secondItem="ith-AG-E9U" secondAttribute="bottom" constant="15" id="tcZ-fR-IWF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -151,11 +152,12 @@
                     <connections>
                         <outlet property="connectButton" destination="AbM-Ur-Ahq" id="aJE-k3-cPL"/>
                         <outlet property="connectStatus" destination="ith-AG-E9U" id="7tn-n7-UkX"/>
+                        <segue destination="GUj-Ql-jxy" kind="show" identifier="setupYourVPN" id="KWs-cY-uEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="117.39130434782609"/>
+            <point key="canvasLocation" x="68" y="116"/>
         </scene>
         <!--Server View Controller-->
         <scene sceneID="z7d-91-XgA">
@@ -377,114 +379,59 @@
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="116.49175412293854"/>
         </scene>
-        <!--Server View Controller-->
+        <!--Setup YourVPN View Controller-->
         <scene sceneID="ArN-Cl-zVF">
             <objects>
-                <viewController id="GUj-Ql-jxy" customClass="ServerViewController" customModule="CheburnetVPN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="GUj-Ql-jxy" customClass="SetupYourVPNViewController" customModule="CheburnetVPN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wSG-an-Lga">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-YC-LrZ">
-                                <rect key="frame" x="16" y="25" width="262" height="25"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th0-mZ-FON">
-                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="ULG-eH-V3l"/>
-                                            <constraint firstAttribute="width" constant="25" id="v23-gS-ml0"/>
-                                        </constraints>
-                                        <state key="normal" image="back"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать сервер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-QA-k0o">
-                                        <rect key="frame" x="81" y="0.0" width="181" height="25"/>
-                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-iE-oJ5">
                                 <rect key="frame" x="320" y="158" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.47594428059999999" green="0.087270669640000006" blue="0.050925299530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETUP YOUR VPN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-lf-CM0">
-                                <rect key="frame" x="120" y="82" width="174" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="Cbd-rX-r7t"/>
-                                    <constraint firstAttribute="height" constant="48" id="OUp-Xa-jYB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VPN Profile is necessary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-xl-USO">
-                                <rect key="frame" x="119.66666666666667" y="128" width="174.66666666666663" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174.5" id="SY0-tM-Buh"/>
-                                    <constraint firstAttribute="height" constant="19" id="X00-Ey-FWd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Tap Allow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5I4-pn-pyG">
-                                <rect key="frame" x="140.33333333333334" y="296" width="86.666666666666657" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="7VP-QQ-1bp"/>
-                                    <constraint firstAttribute="height" id="DiT-ai-J0G"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Tap Allow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SI-5R-7ba">
-                                <rect key="frame" x="163.66666666666666" y="199" width="87" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="87" id="4CD-N7-DGg"/>
-                                    <constraint firstAttribute="height" constant="19" id="wwY-Tq-0Xb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-WM-7IX">
                                 <rect key="frame" x="0.0" y="249" width="414" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VPN Master would like to add configuration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-qI-yfk">
-                                        <rect key="frame" x="21.333333333333343" y="1" width="310.66666666666663" height="46"/>
+                                        <rect key="frame" x="113" y="6" width="188" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="BlE-nK-noQ"/>
+                                            <constraint firstAttribute="height" constant="35" id="QKc-QB-QdQ"/>
+                                            <constraint firstAttribute="width" constant="188" id="Wmu-e4-mqj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.47594428059999999" green="0.087270669640000006" blue="0.050925299530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.41739487650000001" green="0.067554339769999999" blue="0.039167508480000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="TpQ-qI-yfk" secondAttribute="bottom" id="GvK-5t-G0M"/>
-                                    <constraint firstAttribute="trailing" secondItem="TpQ-qI-yfk" secondAttribute="trailing" constant="82" id="SbI-oh-Am0"/>
-                                    <constraint firstAttribute="height" constant="47" id="YCt-yg-dMz"/>
-                                    <constraint firstItem="TpQ-qI-yfk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YFZ-WM-7IX" secondAttribute="leading" symbolic="YES" id="bcd-gb-ftt"/>
+                                    <constraint firstItem="TpQ-qI-yfk" firstAttribute="centerY" secondItem="YFZ-WM-7IX" secondAttribute="centerY" id="NAo-CQ-ksG"/>
+                                    <constraint firstItem="TpQ-qI-yfk" firstAttribute="centerX" secondItem="YFZ-WM-7IX" secondAttribute="centerX" id="RYa-82-y6V"/>
+                                    <constraint firstAttribute="height" constant="47" id="bfp-h8-hhI"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Enter Touch ID or Iphone Passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEu-2Q-Tfp">
-                                <rect key="frame" x="52" y="372" width="310" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="19" id="eVW-Pe-57m"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Enter Touch ID or Iphone Passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEu-2Q-Tfp">
+                                <rect key="frame" x="80.333333333333329" y="370" width="253.66666666666669" height="17.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Tap Allow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SI-5R-7ba">
+                                <rect key="frame" x="163.66666666666666" y="199" width="86.666666666666657" height="18.666666666666657"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKo-uC-Ibv" customClass="SegmentedControl" customModule="CheburnetVPN" customModuleProvider="target">
-                                <rect key="frame" x="65" y="314" width="284" height="44"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKo-uC-Ibv" customClass="SegmentedControl" customModule="CheburnetVPN" customModuleProvider="target">
+                                <rect key="frame" x="65" y="314" width="284" height="39"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hMk-1s-bQw"/>
+                                    <constraint firstAttribute="width" constant="284" id="Xv1-0j-vyd"/>
+                                    <constraint firstAttribute="height" constant="39" id="hMk-1s-bQw"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -493,7 +440,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="Color-1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSepatatedButtonTitles" value="     Allow,   Don't allow"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSepatatedButtonTitles" value="       Allow,   Don't allow"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -507,35 +454,59 @@
                                         <real key="value" value="1.3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
-                                        <color key="value" red="0.74917465449999998" green="0.15836918350000001" blue="0.1057996973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.68282061819999995" green="0.1386266649" blue="0.094043500720000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать сервер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-QA-k0o">
+                                <rect key="frame" x="116.66666666666669" y="25.000000000000004" width="181" height="34.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9SN-rN-YO5">
+                                <rect key="frame" x="120.00000000000001" y="111" width="174.33333333333337" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETUP YOUR VPN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-lf-CM0">
+                                        <rect key="frame" x="0.0" y="0.0" width="174.33333333333334" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VPN Profile is necessary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-xl-USO">
+                                        <rect key="frame" x="0.0" y="34.333333333333343" width="174.33333333333334" height="18.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th0-mZ-FON">
+                                <rect key="frame" x="20" y="30" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ULG-eH-V3l"/>
+                                    <constraint firstAttribute="width" constant="25" id="v23-gS-ml0"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51887947320000005" green="0.095200128849999996" blue="0.05876409262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="RsA-lf-CM0" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="3JZ-dp-WRp"/>
-                            <constraint firstItem="HKa-YC-LrZ" firstAttribute="top" secondItem="7Yv-po-OXt" secondAttribute="top" constant="25" id="3im-Y9-uZn"/>
-                            <constraint firstItem="5I4-pn-pyG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wSG-an-Lga" secondAttribute="leadingMargin" id="3mN-lK-auS"/>
-                            <constraint firstAttribute="trailing" secondItem="5I4-pn-pyG" secondAttribute="trailing" constant="187" id="4FE-Rm-Bw8"/>
-                            <constraint firstItem="8SI-5R-7ba" firstAttribute="top" secondItem="DUT-xl-USO" secondAttribute="bottom" constant="52" id="5PM-SE-wAU"/>
-                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="trailing" secondItem="7Yv-po-OXt" secondAttribute="trailing" id="6sq-Ms-4i7"/>
-                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" id="A89-Wl-zym"/>
-                            <constraint firstItem="7Yv-po-OXt" firstAttribute="trailing" secondItem="DKo-uC-Ibv" secondAttribute="trailing" constant="65" id="Dkc-Pk-Evf"/>
-                            <constraint firstItem="DUT-xl-USO" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="M7X-iT-0HB"/>
-                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" constant="52" id="OxQ-MC-kuo"/>
-                            <constraint firstItem="5I4-pn-pyG" firstAttribute="bottom" secondItem="YFZ-WM-7IX" secondAttribute="bottom" id="Xpu-zC-5ZO"/>
-                            <constraint firstItem="DKo-uC-Ibv" firstAttribute="top" secondItem="TpQ-qI-yfk" secondAttribute="bottom" constant="18" id="c1e-ur-2ie"/>
-                            <constraint firstItem="RsA-lf-CM0" firstAttribute="top" secondItem="Llg-QA-k0o" secondAttribute="bottom" constant="32" id="dKi-XK-k4V"/>
-                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="dQm-r7-IRx"/>
-                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="top" secondItem="8SI-5R-7ba" secondAttribute="bottom" constant="31" id="dpt-cI-38d"/>
-                            <constraint firstItem="DUT-xl-USO" firstAttribute="top" secondItem="RsA-lf-CM0" secondAttribute="bottom" constant="-2" id="fgG-yX-sLO"/>
-                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="top" secondItem="DKo-uC-Ibv" secondAttribute="bottom" constant="14" id="iha-k5-DAw"/>
-                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" id="q0a-7a-NAT"/>
-                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="trailing" secondItem="7Yv-po-OXt" secondAttribute="trailing" id="rYO-j6-Igb"/>
-                            <constraint firstItem="DKo-uC-Ibv" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" constant="65" id="vgZ-nh-RNc"/>
-                            <constraint firstItem="HKa-YC-LrZ" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" constant="16" id="wYi-8i-KOq"/>
-                            <constraint firstItem="8SI-5R-7ba" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="xyg-iu-xDy"/>
+                            <constraint firstItem="Th0-mZ-FON" firstAttribute="top" secondItem="7Yv-po-OXt" secondAttribute="top" constant="30" id="2K2-pK-1Z9"/>
+                            <constraint firstItem="DKo-uC-Ibv" firstAttribute="top" secondItem="YFZ-WM-7IX" secondAttribute="bottom" constant="18" id="2dV-lW-4z7"/>
+                            <constraint firstItem="Llg-QA-k0o" firstAttribute="top" secondItem="7Yv-po-OXt" secondAttribute="top" constant="25" id="3Uk-Nq-uMG"/>
+                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="top" secondItem="DKo-uC-Ibv" secondAttribute="bottom" constant="17" id="4hB-87-AdE"/>
+                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="top" secondItem="8SI-5R-7ba" secondAttribute="bottom" constant="31.333333333333343" id="9ZU-Zh-HT7"/>
+                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="leading" secondItem="8SI-5R-7ba" secondAttribute="trailing" constant="-250.33333333333331" id="9y3-OW-e4b"/>
+                            <constraint firstItem="Th0-mZ-FON" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" constant="20" id="HZi-gr-6Qn"/>
+                            <constraint firstItem="9SN-rN-YO5" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="J7P-32-BDR"/>
+                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="bbc-qa-TmD"/>
+                            <constraint firstItem="8SI-5R-7ba" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="c5g-A8-3dq"/>
+                            <constraint firstItem="DKo-uC-Ibv" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="hUe-Cd-AUp"/>
+                            <constraint firstItem="Llg-QA-k0o" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="jkQ-QP-XnH"/>
+                            <constraint firstItem="8SI-5R-7ba" firstAttribute="top" secondItem="DUT-xl-USO" secondAttribute="bottom" constant="35" id="r2T-NS-pKJ"/>
+                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="stt-kj-JbS"/>
+                            <constraint firstItem="9SN-rN-YO5" firstAttribute="top" secondItem="Llg-QA-k0o" secondAttribute="bottom" constant="51.666666666666657" id="xAN-dd-ATz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Yv-po-OXt"/>
                     </view>
@@ -543,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMr-uj-2nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295" y="116"/>
+            <point key="canvasLocation" x="2141" y="116"/>
         </scene>
         <!--In App Purchase View Controller-->
         <scene sceneID="dIJ-nF-F56">
@@ -825,7 +796,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="lQ9-0n-bSf"/>
                                 </constraints>
-                                <mutableString key="text">Предложение ограничено: каждому пользователю доступен только один 7-дневный пробный период. Если подписку не отменить до окончания 7-дневного периода, она будет продлена автоматически. Подписку можно отменить в любое время в настройках App Store Apple ID. Все цены указаны с учетом местных налогов на продажи. Платеж будет осуществлен с учетной записи iTunes при подтверждении покупки. Подписка продлится автоматически, если не отключить автоматическое продление за 24 часа до конца текущего периода. Плата за продление будет списана с вашей учетной записи в течение 24 часов до времени окончания текущей подписки. Неиспользованная часть бесплатного пробного периода при ее наличии утрачивается, если пользователь приобретает подписку на данную публикацию.</mutableString>
+                                <string key="text">Предложение ограничено: каждому пользователю доступен только один 7-дневный пробный период. Если подписку не отменить до окончания 7-дневного периода, она будет продлена автоматически. Подписку можно отменить в любое время в настройках App Store Apple ID. Все цены указаны с учетом местных налогов на продажи. Платеж будет осуществлен с учетной записи iTunes при подтверждении покупки. Подписка продлится автоматически, если не отключить автоматическое продление за 24 часа до конца текущего периода. Плата за продление будет списана с вашей учетной записи в течение 24 часов до времени окончания текущей подписки. Неиспользованная часть бесплатного пробного периода при ее наличии утрачивается, если пользователь приобретает подписку на данную публикацию.</string>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="8"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
