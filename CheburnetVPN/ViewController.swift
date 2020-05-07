@@ -15,8 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var connectButton: customButton!
     
     var isAllowed: Bool = true
-    
-    var isPresentSetupVPN: Bool = false
     let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -31,7 +29,6 @@ class ViewController: UIViewController {
     
     func checkIsAllowConnectToVPN() {
         
-        
         if !isAllowed {
             segueToSetupYourVPNVC()
             isAllowed = userDefaults.bool(forKey: "isAllowed")
@@ -42,16 +39,16 @@ class ViewController: UIViewController {
     func vpnStateChanged(status: NEVPNStatus) {
         switch status {
         case .disconnected, .invalid, .reasserting:
-            connectButton.setTitle("Подключиться", for: .normal)
+            connectButton.setTitle(Text.connect, for: .normal)
             connectStatus.isHidden = true
         case .connected:
             connectStatus.isHidden = true
-            connectButton.setTitle("Отключиться", for: .normal)
+            connectButton.setTitle(Text.disconnect, for: .normal)
         case .connecting:
-            self.connectStatus.text = "Подключение..."
+            self.connectStatus.text = Text.connecting
             connectStatus.isHidden = false
         case .disconnecting:
-            connectStatus.text = "Отключение..."
+            connectStatus.text = Text.disconnecting
         @unknown default:
             break
         }

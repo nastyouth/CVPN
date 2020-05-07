@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  CheburnetVPN
+
+  Created by Анастасия on 07.05.2020.
+  Copyright © 2020 Анастасия. All rights reserved.
+*/
+
+"connect_to_VPN" = "Подключиться";
+"disconnect_to_VPN" = "Отключиться";
+"connecting_to_VPN" = "Подключение...";
+"disconnecting_to_VPN" = "Отключение...";
+"purchase_week_type" = "Недельная";
+"purchase_month_type" = "Месячная";
+"purchase_year_type" = "Годовая";
+"name_die_with_popular_promotion" = "Самый популярный";
+"name_die_with_cheap_promotion" = "Самый дешевый";
