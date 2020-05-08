@@ -17,8 +17,8 @@ class ServerViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func openMenu(_ sender: Any) {
+//        dismiss(animated: true, completion: nil)
     }
 }
 

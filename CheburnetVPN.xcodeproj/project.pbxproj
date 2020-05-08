@@ -24,6 +24,7 @@
 		5D4989442462C0A4005CCAB1 /* SetupYourVPNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4989432462C0A4005CCAB1 /* SetupYourVPNViewController.swift */; };
 		5D8BC56E245835C4008218E6 /* InAppPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */; };
 		5D8BC57024583BB4008218E6 /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */; };
+		5DA8CC2824658CA8006303EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8CC2724658CA8006303EA /* MenuViewController.swift */; };
 		5DC3242C24571C440079766A /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3242B24571C440079766A /* ServerCell.swift */; };
 		5DC3242E24571E7D0079766A /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3242D24571E7D0079766A /* SegmentedControl.swift */; };
 		5DCAA2CE2461B1F9009501DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DCAA2CD2461B1F9009501DF /* GoogleService-Info.plist */; };
@@ -66,6 +67,7 @@
 		5D7CBED524C03165E4F6731E /* Pods-CheburnetVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheburnetVPN.debug.xcconfig"; path = "Target Support Files/Pods-CheburnetVPN/Pods-CheburnetVPN.debug.xcconfig"; sourceTree = "<group>"; };
 		5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseViewController.swift; sourceTree = "<group>"; };
 		5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		5DA8CC2724658CA8006303EA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5DC3242B24571C440079766A /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
 		5DC3242D24571E7D0079766A /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCAA2CD2461B1F9009501DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				5D4989432462C0A4005CCAB1 /* SetupYourVPNViewController.swift */,
 				5DCAA2CF2461C2CC009501DF /* LogEvents.swift */,
 				5D42D67E246448CE00910A17 /* Text.swift */,
+				5DA8CC2724658CA8006303EA /* MenuViewController.swift */,
 				5D42D68424644A7800910A17 /* Localizable.strings */,
 				5DECCA8F2456EE1400D45308 /* Main.storyboard */,
 				5DECCA942456EE1600D45308 /* LaunchScreen.storyboard */,
@@ -318,6 +321,7 @@
 				5DECCAA62457128100D45308 /* ServerViewController.swift in Sources */,
 				5DC3242C24571C440079766A /* ServerCell.swift in Sources */,
 				5D4085D4245B69B000277226 /* Configuration.swift in Sources */,
+				5DA8CC2824658CA8006303EA /* MenuViewController.swift in Sources */,
 				5DCAA2D02461C2CC009501DF /* LogEvents.swift in Sources */,
 				5D4989442462C0A4005CCAB1 /* SetupYourVPNViewController.swift in Sources */,
 				5D4085D8245B6DB400277226 /* KeychainWrapper.swift in Sources */,

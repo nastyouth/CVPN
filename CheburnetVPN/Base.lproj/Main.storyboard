@@ -213,9 +213,10 @@
                                             <constraint firstAttribute="width" constant="25" id="OCx-sw-QsL"/>
                                             <constraint firstAttribute="height" constant="25" id="d7X-GG-UGI"/>
                                         </constraints>
-                                        <state key="normal" image="back"/>
+                                        <state key="normal" image="Меню"/>
                                         <connections>
-                                            <action selector="back:" destination="Rgj-lU-QPH" eventType="touchUpInside" id="Gsd-l0-SJg"/>
+                                            <action selector="openMenu:" destination="Rgj-lU-QPH" eventType="touchUpInside" id="Gsd-l0-SJg"/>
+                                            <segue destination="UeY-A6-g0c" kind="show" id="WuU-fI-zR6"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать сервер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSh-WI-FCS">
@@ -515,6 +516,218 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMr-uj-2nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2141" y="116"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="gtB-zO-xWK">
+            <objects>
+                <viewController id="UeY-A6-g0c" customClass="MenuViewController" customModule="CheburnetVPN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRS-NI-xKx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v6j-AY-8Tr">
+                                <rect key="frame" x="82" y="200" width="250" height="316"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qn-fW-Udp" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="FQi-wv-kRi"/>
+                                            <constraint firstAttribute="height" constant="46" id="Km5-hH-ucu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
+                                        <state key="normal" title="Партнерская программа">
+                                            <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="partnershipProgram:" destination="UeY-A6-g0c" eventType="touchUpInside" id="azy-zL-Sen"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td0-zH-dhX" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="54" width="250" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="Sul-DC-A4X"/>
+                                            <constraint firstAttribute="width" constant="250" id="fYJ-lg-Hlv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
+                                        <state key="normal" title="тарифы">
+                                            <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tariffs:" destination="UeY-A6-g0c" eventType="touchUpInside" id="Kxi-At-bkR"/>
+                                            <segue destination="XAc-TF-970" kind="show" id="gFm-XT-1U7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkd-rj-iOJ" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108" width="250" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="4Lq-d7-Hef"/>
+                                            <constraint firstAttribute="height" constant="46" id="Frp-iT-5L5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
+                                        <state key="normal" title="помощь">
+                                            <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="support:" destination="UeY-A6-g0c" eventType="touchUpInside" id="QAh-gJ-KmH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08O-tf-G8h" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="162" width="250" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="S7O-Ne-BNp"/>
+                                            <constraint firstAttribute="width" constant="250" id="aC1-UR-egM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
+                                        <state key="normal" title="оценить приложение">
+                                            <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rateTheApp:" destination="UeY-A6-g0c" eventType="touchUpInside" id="Vxe-8T-WY4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVQ-FJ-f4w" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="216" width="250" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="4iU-NG-gCc"/>
+                                            <constraint firstAttribute="width" constant="250" id="Ruv-eq-lpi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
+                                        <state key="normal" title="восстановить покупки">
+                                            <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="restorePurchases:" destination="UeY-A6-g0c" eventType="touchUpInside" id="Ino-gB-eAn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sy-Md-7Xb" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="270" width="250" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="A1x-yj-0Cf"/>
+                                            <constraint firstAttribute="height" constant="46" id="Wzd-pZ-g9e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
+                                        <state key="normal" title="условия использования">
+                                            <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="Color-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="termsOfUse:" destination="UeY-A6-g0c" eventType="touchUpInside" id="vZO-lK-vGZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV3-YB-5bi">
+                                <rect key="frame" x="20" y="20" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="JqE-he-er7"/>
+                                    <constraint firstAttribute="height" constant="25" id="aDf-O8-3Jv"/>
+                                </constraints>
+                                <state key="normal" image="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="XAc-TF-970" eventType="touchUpInside" id="AzH-fz-N53"/>
+                                    <action selector="cancel:" destination="UeY-A6-g0c" eventType="touchUpInside" id="Uxe-Cg-G65"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51887947320000005" green="0.095200128849999996" blue="0.05876409262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="v6j-AY-8Tr" firstAttribute="centerY" secondItem="DRS-NI-xKx" secondAttribute="centerY" id="36y-6d-mlf"/>
+                            <constraint firstItem="v6j-AY-8Tr" firstAttribute="centerX" secondItem="DRS-NI-xKx" secondAttribute="centerX" id="6GC-VW-Yaa"/>
+                            <constraint firstItem="kV3-YB-5bi" firstAttribute="leading" secondItem="ivi-Dz-lbu" secondAttribute="leading" constant="20" id="EOJ-Fk-vzp"/>
+                            <constraint firstItem="v6j-AY-8Tr" firstAttribute="leading" secondItem="ivi-Dz-lbu" secondAttribute="leading" constant="82" id="IoC-Fj-xno"/>
+                            <constraint firstItem="kV3-YB-5bi" firstAttribute="top" secondItem="ivi-Dz-lbu" secondAttribute="top" constant="20" id="UNR-Je-cm8"/>
+                            <constraint firstItem="ivi-Dz-lbu" firstAttribute="trailing" secondItem="v6j-AY-8Tr" secondAttribute="trailing" constant="82" id="XYA-qF-0Rh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ivi-Dz-lbu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gmA-Rb-3nJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgf-hb-5Ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808.6956521739135" y="115.7608695652174"/>
         </scene>
         <!--In App Purchase View Controller-->
         <scene sceneID="dIJ-nF-F56">
@@ -840,11 +1053,12 @@
         <image name="back" width="100" height="100"/>
         <image name="usa" width="409.66665649414062" height="271"/>
         <image name="Заставка2" width="2050" height="1345"/>
+        <image name="Меню" width="100" height="100"/>
         <namedColor name="Color-1">
             <color red="0.96799999475479126" green="0.80299997329711914" blue="0.27399998903274536" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jPe-Ua-Pls"/>
+        <segue reference="gFm-XT-1U7"/>
     </inferredMetricsTieBreakers>
 </document>
