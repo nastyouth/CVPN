@@ -12,7 +12,7 @@ import StoreKit
 class InAppPurchaseViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var selectedIndex = 0
+    var selectedIndex = 1
     
     let purchaseTypesArray = [Text.nameWeekPurchase, Text.nameMonthPurchase, Text.nameYearPurchase]
     let purchasePricesArray = ["699.88", "849.88", "5 499.88"]
