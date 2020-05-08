@@ -13,14 +13,18 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var connectStatus: UILabel!
     @IBOutlet weak var connectButton: customButton!
+    @IBOutlet weak var connectImageView: UIImageView!
+    
     
     var isAllowed: Bool = true
     let userDefaults = UserDefaults.standard
+    var animationImages = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         vpnStateChanged(status: VPNManager.shared.status)
         VPNManager.shared.statusEvent.attach(self, ViewController.vpnStateChanged)
+        fillingAnimationImagesArray()
     }
     
     func segueToSetupYourVPNVC() {
@@ -28,12 +32,26 @@ class ViewController: UIViewController {
     }
     
     func checkIsAllowConnectToVPN() {
-        
         if !isAllowed {
             segueToSetupYourVPNVC()
             isAllowed = userDefaults.bool(forKey: "isAllowed")
             print(isAllowed)
         }
+    }
+
+    func fillingAnimationImagesArray() {
+        for i in 0...59 {
+            let image: UIImage = UIImage(named:"Seq_\(i)")!
+            animationImages.append(image)
+        }
+    }
+    
+    func connectAnimation<T>(imageArray: [T]) {
+        connectImageView.animationImages = imageArray as? [UIImage]
+        connectImageView.animationDuration = 2.0
+        connectImageView.animationRepeatCount = 1
+        connectImageView.startAnimating()
+        
     }
 
     func vpnStateChanged(status: NEVPNStatus) {
@@ -45,10 +63,14 @@ class ViewController: UIViewController {
             connectStatus.isHidden = true
             connectButton.setTitle(Text.disconnect, for: .normal)
         case .connecting:
+            connectAnimation(imageArray: animationImages)
             self.connectStatus.text = Text.connecting
             connectStatus.isHidden = false
+            connectImageView.image = UIImage(named:"Seq_59")
         case .disconnecting:
+            connectAnimation(imageArray: animationImages.reversed())
             connectStatus.text = Text.disconnecting
+            connectImageView.image = UIImage(named:"Seq_0")
         @unknown default:
             break
         }

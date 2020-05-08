@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Заставка2" translatesAutoresizingMaskIntoConstraints="NO" id="2UA-GI-D7G">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Seq_0" translatesAutoresizingMaskIntoConstraints="NO" id="2UA-GI-D7G">
                                 <rect key="frame" x="-57" y="60" width="528" height="346"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="528" id="crd-E9-7gt"/>
@@ -151,6 +151,7 @@
                     </view>
                     <connections>
                         <outlet property="connectButton" destination="AbM-Ur-Ahq" id="aJE-k3-cPL"/>
+                        <outlet property="connectImageView" destination="2UA-GI-D7G" id="Geg-kr-Ri2"/>
                         <outlet property="connectStatus" destination="ith-AG-E9U" id="7tn-n7-UkX"/>
                         <segue destination="GUj-Ql-jxy" kind="show" identifier="setupYourVPN" id="KWs-cY-uEA"/>
                     </connections>
@@ -1050,15 +1051,15 @@
         <image name="Cancel" width="100" height="100"/>
         <image name="Comp" width="942" height="668"/>
         <image name="Map" width="100" height="100"/>
+        <image name="Seq_0" width="2052" height="1324"/>
         <image name="back" width="100" height="100"/>
         <image name="usa" width="409.66665649414062" height="271"/>
-        <image name="Заставка2" width="2050" height="1345"/>
         <image name="Меню" width="100" height="100"/>
         <namedColor name="Color-1">
             <color red="0.96799999475479126" green="0.80299997329711914" blue="0.27399998903274536" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gFm-XT-1U7"/>
+        <segue reference="jPe-Ua-Pls"/>
     </inferredMetricsTieBreakers>
 </document>
