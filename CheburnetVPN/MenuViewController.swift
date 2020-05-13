@@ -31,19 +31,19 @@ class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate 
         
             let composeVC = MFMailComposeViewController()
             composeVC.mailComposeDelegate = self
-            
+
             composeVC.setToRecipients(["address@example.com"])
             composeVC.setSubject("Hello!")
             composeVC.setMessageBody("Hello from California!", isHTML: false)
-            composeVC.mailComposeDelegate = self
              
-            self.present(composeVC, animated: true, completion: nil)
+            present(composeVC, animated: true, completion: nil)
         }
-        
-        func mailComposeController(controller: MFMailComposeViewController,
-                                   didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-            controller.dismiss(animated: true, completion: nil)
-        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult,
+                               error: Swift.Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func rateTheApp(_ sender: Any) {
