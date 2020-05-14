@@ -2,8 +2,8 @@
 //  InAppPurchaseViewController.swift
 //  CheburnetVPN
 //
-//  Created by Анастасия on 28.04.2020.
-//  Copyright © 2020 Анастасия. All rights reserved.
+//  Created by Apparat on 28.04.2020.
+//  Copyright © 2020 Apparat. All rights reserved.
 //
 
 import UIKit

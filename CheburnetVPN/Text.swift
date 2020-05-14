@@ -2,8 +2,8 @@
 //  Text.swift
 //  CheburnetVPN
 //
-//  Created by Анастасия on 07.05.2020.
-//  Copyright © 2020 Анастасия. All rights reserved.
+//  Created by Apparat on 07.05.2020.
+//  Copyright © 2020 Apparat. All rights reserved.
 //
 
 import Foundation
