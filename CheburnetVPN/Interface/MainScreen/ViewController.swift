@@ -9,12 +9,13 @@
 import UIKit
 import NetworkExtension
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, ServerViewControllerDelegate {
+    
     @IBOutlet weak var connectStatus: UILabel!
     @IBOutlet weak var connectButton: customButton!
     @IBOutlet weak var connectImageView: UIImageView!
     
+    var server: String?
     
     var isAllowed: Bool = true
     let userDefaults = UserDefaults.standard
@@ -25,6 +26,17 @@ class ViewController: UIViewController {
         vpnStateChanged(status: VPNManager.shared.status)
         VPNManager.shared.statusEvent.attach(self, ViewController.vpnStateChanged)
         fillingAnimationImagesArray()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToChooseServer" {
+            let destanationVC = segue.destination as? ServerViewController
+            destanationVC?.delegate = self
+        }
+    }
+    
+    func fillServer(_ server: String) {
+        self.server = server
     }
     
     func segueToSetupYourVPNVC() {
@@ -51,7 +63,6 @@ class ViewController: UIViewController {
         connectImageView.animationDuration = 2.0
         connectImageView.animationRepeatCount = 1
         connectImageView.startAnimating()
-        
     }
 
     func vpnStateChanged(status: NEVPNStatus) {
@@ -77,12 +88,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func connectToVPN(_ sender: Any) {
+        print(server ?? "Not found server name")
         if (VPNManager.shared.isDisconnected) {
             let config = Configuration(
-                server: "ikev2.korzh.pro",
+                server: server ?? "dev0.4ebur.net",
                 account: "nano",
                 password: "nanonano")
-            
             if !isAllowed {
                 segueToSetupYourVPNVC()
             }

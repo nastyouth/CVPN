@@ -25,8 +25,5 @@ class SetupYourVPNViewController: UIViewController {
         } else {
             VPNManager.shared.disconnect()
         }
-        
     }
-
-
 }

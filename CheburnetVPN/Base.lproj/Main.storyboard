@@ -100,7 +100,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Rgj-lU-QPH" kind="show" id="2HP-SS-FVk"/>
+                                    <segue destination="Rgj-lU-QPH" kind="show" identifier="segueToChooseServer" id="Gw0-QK-fMr"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="N45-h7-eRg">
