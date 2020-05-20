@@ -14,9 +14,9 @@ class InAppPurchaseViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var selectedIndex = 1
     
-    let purchaseTypesArray = [Text.nameWeekPurchase, Text.nameMonthPurchase, Text.nameYearPurchase]
+    let purchaseTypesArray = [LocalizationText.nameWeekPurchase, LocalizationText.nameMonthPurchase, LocalizationText.nameYearPurchase]
     let purchasePricesArray = ["699.88", "849.88", "5 499.88"]
-    let namesDieWithPromotionArray = ["", Text.nameDieWithPopularPromotion, Text.nameDieWithCheapPromotion]
+    let namesDieWithPromotionArray = ["", LocalizationText.nameDieWithPopularPromotion, LocalizationText.nameDieWithCheapPromotion]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -57,19 +57,19 @@ class ViewController: UIViewController {
     func vpnStateChanged(status: NEVPNStatus) {
         switch status {
         case .disconnected, .invalid, .reasserting:
-            connectButton.setTitle(Text.connect, for: .normal)
+            connectButton.setTitle(LocalizationText.connect, for: .normal)
             connectStatus.isHidden = true
         case .connected:
             connectStatus.isHidden = true
-            connectButton.setTitle(Text.disconnect, for: .normal)
+            connectButton.setTitle(LocalizationText.disconnect, for: .normal)
         case .connecting:
             connectAnimation(imageArray: animationImages)
-            self.connectStatus.text = Text.connecting
+            self.connectStatus.text = LocalizationText.connecting
             connectStatus.isHidden = false
             connectImageView.image = UIImage(named:"Seq_59")
         case .disconnecting:
             connectAnimation(imageArray: animationImages.reversed())
-            connectStatus.text = Text.disconnecting
+            connectStatus.text = LocalizationText.disconnecting
             connectImageView.image = UIImage(named:"Seq_0")
         @unknown default:
             break

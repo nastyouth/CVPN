@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Text {
+struct LocalizationText {
     static let connect = NSLocalizedString("connect_to_VPN", comment: "")
     static let disconnect = NSLocalizedString("disconnect_to_VPN", comment: "")
     static let connecting = NSLocalizedString("connecting_to_VPN", comment: "")

@@ -19,7 +19,7 @@
 		5D4085E1245C41C200277226 /* POBEDA-REGULAR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5D4085DE245C41C200277226 /* POBEDA-REGULAR.TTF */; };
 		5D4085E3245EE44E00277226 /* IAProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4085E2245EE44E00277226 /* IAProduct.swift */; };
 		5D4085E5245EE57100277226 /* IAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4085E4245EE57100277226 /* IAService.swift */; };
-		5D42D67F246448CE00910A17 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D42D67E246448CE00910A17 /* Text.swift */; };
+		5D42D67F246448CE00910A17 /* LocalizationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D42D67E246448CE00910A17 /* LocalizationText.swift */; };
 		5D42D68224644A7800910A17 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D42D68424644A7800910A17 /* Localizable.strings */; };
 		5D4989442462C0A4005CCAB1 /* SetupYourVPNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4989432462C0A4005CCAB1 /* SetupYourVPNViewController.swift */; };
 		5D8BC56E245835C4008218E6 /* InAppPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */; };
@@ -56,7 +56,7 @@
 		5D42D67B2464434700910A17 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		5D42D67C2464434800910A17 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5D42D67D246448AE00910A17 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		5D42D67E246448CE00910A17 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		5D42D67E246448CE00910A17 /* LocalizationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationText.swift; sourceTree = "<group>"; };
 		5D42D68524644A7C00910A17 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D42D68624644A7D00910A17 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D42D6882464576A00910A17 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
@@ -120,6 +120,98 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5D6ECCBB2475548600DEE19A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				5D6ECCC42475554400DEE19A /* CustomViews */,
+				5D6ECCBC2475549D00DEE19A /* MainScreen */,
+				5D6ECCBF247554CF00DEE19A /* ServerViewController */,
+				5D6ECCC0247554E200DEE19A /* IAPurchaseViewController */,
+				5D6ECCC22475551F00DEE19A /* SetupYourVPNViewController */,
+				5D6ECCC32475552A00DEE19A /* MenuViewController */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		5D6ECCBC2475549D00DEE19A /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5DECCA8D2456EE1400D45308 /* ViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		5D6ECCBD247554AB00DEE19A /* VPNManager */ = {
+			isa = PBXGroup;
+			children = (
+				5D4085D1245B699100277226 /* VPNManager.swift */,
+				5D4085D3245B69B000277226 /* Configuration.swift */,
+				5D4085D5245B69F000277226 /* Observer.swift */,
+			);
+			path = VPNManager;
+			sourceTree = "<group>";
+		};
+		5D6ECCBE247554B900DEE19A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5D6ECCBD247554AB00DEE19A /* VPNManager */,
+				5D6ECCC12475551100DEE19A /* IAPurchase */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5D6ECCBF247554CF00DEE19A /* ServerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5DECCAA52457128100D45308 /* ServerViewController.swift */,
+				5DC3242B24571C440079766A /* ServerCell.swift */,
+			);
+			path = ServerViewController;
+			sourceTree = "<group>";
+		};
+		5D6ECCC0247554E200DEE19A /* IAPurchaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */,
+				5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */,
+			);
+			path = IAPurchaseViewController;
+			sourceTree = "<group>";
+		};
+		5D6ECCC12475551100DEE19A /* IAPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				5D4085E4245EE57100277226 /* IAService.swift */,
+				5D4085E2245EE44E00277226 /* IAProduct.swift */,
+			);
+			path = IAPurchase;
+			sourceTree = "<group>";
+		};
+		5D6ECCC22475551F00DEE19A /* SetupYourVPNViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D4989432462C0A4005CCAB1 /* SetupYourVPNViewController.swift */,
+			);
+			path = SetupYourVPNViewController;
+			sourceTree = "<group>";
+		};
+		5D6ECCC32475552A00DEE19A /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8CC2724658CA8006303EA /* MenuViewController.swift */,
+			);
+			path = MenuViewController;
+			sourceTree = "<group>";
+		};
+		5D6ECCC42475554400DEE19A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5DECCAA32457018E00D45308 /* CustomButton.swift */,
+				5DC3242D24571E7D0079766A /* SegmentedControl.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		5DECCA7D2456EE1400D45308 = {
 			isa = PBXGroup;
 			children = (
@@ -142,25 +234,14 @@
 			isa = PBXGroup;
 			children = (
 				5D4085D9245B740200277226 /* CheburnetVPN.entitlements */,
+				5DECCA9D2456F2E900D45308 /* Fonts */,
 				5DECCA892456EE1400D45308 /* AppDelegate.swift */,
 				5DECCA8B2456EE1400D45308 /* SceneDelegate.swift */,
 				5D4085D7245B6DB400277226 /* KeychainWrapper.swift */,
+				5D6ECCBB2475548600DEE19A /* Interface */,
+				5D6ECCBE247554B900DEE19A /* Service */,
 				5DCAA2CF2461C2CC009501DF /* LogEvents.swift */,
-				5D42D67E246448CE00910A17 /* Text.swift */,
-				5DECCAA32457018E00D45308 /* CustomButton.swift */,
-				5DC3242D24571E7D0079766A /* SegmentedControl.swift */,
-				5DECCA8D2456EE1400D45308 /* ViewController.swift */,
-				5D4085D1245B699100277226 /* VPNManager.swift */,
-				5D4085D3245B69B000277226 /* Configuration.swift */,
-				5D4085D5245B69F000277226 /* Observer.swift */,
-				5DECCAA52457128100D45308 /* ServerViewController.swift */,
-				5DC3242B24571C440079766A /* ServerCell.swift */,
-				5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */,
-				5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */,
-				5D4085E2245EE44E00277226 /* IAProduct.swift */,
-				5D4085E4245EE57100277226 /* IAService.swift */,
-				5D4989432462C0A4005CCAB1 /* SetupYourVPNViewController.swift */,
-				5DA8CC2724658CA8006303EA /* MenuViewController.swift */,
+				5D42D67E246448CE00910A17 /* LocalizationText.swift */,
 				5D42D68424644A7800910A17 /* Localizable.strings */,
 				5DECCA8F2456EE1400D45308 /* Main.storyboard */,
 				5DECCA942456EE1600D45308 /* LaunchScreen.storyboard */,
@@ -168,7 +249,6 @@
 				5DECCAA12456F56900D45308 /* Colors.xcassets */,
 				5DCAA2CD2461B1F9009501DF /* GoogleService-Info.plist */,
 				5DECCA972456EE1600D45308 /* Info.plist */,
-				5DECCA9D2456F2E900D45308 /* Fonts */,
 			);
 			path = CheburnetVPN;
 			sourceTree = "<group>";
@@ -311,7 +391,7 @@
 				5D4085D6245B69F000277226 /* Observer.swift in Sources */,
 				5DECCAA42457018E00D45308 /* CustomButton.swift in Sources */,
 				5D4085E3245EE44E00277226 /* IAProduct.swift in Sources */,
-				5D42D67F246448CE00910A17 /* Text.swift in Sources */,
+				5D42D67F246448CE00910A17 /* LocalizationText.swift in Sources */,
 				5D4085D2245B699100277226 /* VPNManager.swift in Sources */,
 				5D8BC56E245835C4008218E6 /* InAppPurchaseViewController.swift in Sources */,
 				5DECCA8E2456EE1400D45308 /* ViewController.swift in Sources */,
@@ -491,7 +571,7 @@
 				CODE_SIGN_ENTITLEMENTS = CheburnetVPN/CheburnetVPN.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 75D344Z5HV;
+				DEVELOPMENT_TEAM = XT64U8RD27;
 				INFOPLIST_FILE = CheburnetVPN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,7 +579,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.apparat.vpn.cheburnet;
+				PRODUCT_BUNDLE_IDENTIFIER = nastyouth.CheburnetVPN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -515,7 +595,7 @@
 				CODE_SIGN_ENTITLEMENTS = CheburnetVPN/CheburnetVPN.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 75D344Z5HV;
+				DEVELOPMENT_TEAM = XT64U8RD27;
 				INFOPLIST_FILE = CheburnetVPN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,7 +603,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.apparat.vpn.cheburnet;
+				PRODUCT_BUNDLE_IDENTIFIER = nastyouth.CheburnetVPN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
