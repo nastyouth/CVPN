@@ -120,19 +120,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5D6ECCBB2475548600DEE19A /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				5D6ECCC42475554400DEE19A /* CustomViews */,
-				5D6ECCBC2475549D00DEE19A /* MainScreen */,
-				5D6ECCBF247554CF00DEE19A /* ServerViewController */,
-				5D6ECCC0247554E200DEE19A /* IAPurchaseViewController */,
-				5D6ECCC22475551F00DEE19A /* SetupYourVPNViewController */,
-				5D6ECCC32475552A00DEE19A /* MenuViewController */,
-			);
-			name = Interface;
-			sourceTree = "<group>";
-		};
 		5D6ECCBC2475549D00DEE19A /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +199,19 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		5D8E7D8024755A650006C015 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				5D6ECCC42475554400DEE19A /* CustomViews */,
+				5D6ECCBC2475549D00DEE19A /* MainScreen */,
+				5D6ECCBF247554CF00DEE19A /* ServerViewController */,
+				5D6ECCC0247554E200DEE19A /* IAPurchaseViewController */,
+				5D6ECCC22475551F00DEE19A /* SetupYourVPNViewController */,
+				5D6ECCC32475552A00DEE19A /* MenuViewController */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		5DECCA7D2456EE1400D45308 = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +238,7 @@
 				5DECCA892456EE1400D45308 /* AppDelegate.swift */,
 				5DECCA8B2456EE1400D45308 /* SceneDelegate.swift */,
 				5D4085D7245B6DB400277226 /* KeychainWrapper.swift */,
-				5D6ECCBB2475548600DEE19A /* Interface */,
+				5D8E7D8024755A650006C015 /* Interface */,
 				5D6ECCBE247554B900DEE19A /* Service */,
 				5DCAA2CF2461C2CC009501DF /* LogEvents.swift */,
 				5D42D67E246448CE00910A17 /* LocalizationText.swift */,
