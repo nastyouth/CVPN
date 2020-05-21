@@ -9,13 +9,21 @@
 import Foundation
 import StoreKit
 import Firebase
+import NotificationCenter
 
 class IAService: NSObject {
     
     private override init() {}
     
+    var requestProd = SKProductsRequest()
     var products = [SKProduct]()
     let paymentQueue = SKPaymentQueue.default()
+    
+    var productsPrice: [Float] = [] {
+        didSet {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "priceAdded"), object: nil)
+        }
+    }
     
     static let shared = IAService()
     
@@ -23,11 +31,11 @@ class IAService: NSObject {
         let products: Set = [IAProduct.weekPurchase.rawValue,
                              IAProduct.monthPurchase.rawValue,
                              IAProduct.yearPurchase.rawValue]
-        
         let request = SKProductsRequest(productIdentifiers: products)
         request.delegate = self
         request.start()
         paymentQueue.add(self)
+        validateProductIdentifiers()
     }
     
     func purchase(product: IAProduct) {
@@ -46,10 +54,24 @@ class IAService: NSObject {
 }
 
 extension IAService: SKProductsRequestDelegate {
+
+    func validateProductIdentifiers() {
+        let productsRequest = SKProductsRequest(productIdentifiers: [])
+
+        self.requestProd = productsRequest;
+        productsRequest.delegate = self
+        productsRequest.start()
+    }
+    
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         self.products = response.products
         for product in response.products {
             print(product.localizedTitle)
+            productsPrice.append(Float(truncating: product.price))
+            
+            for invalidIdentifier in response.invalidProductIdentifiers {
+                    print("invalidIdentifier", invalidIdentifier)
+            }
         }
     }
 }

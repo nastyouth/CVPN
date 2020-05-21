@@ -11,3 +11,7 @@ import Foundation
 protocol ServerViewControllerDelegate {
     func fillServer(_ server: String)
 }
+
+protocol IAPurchaseDelegate {
+    func fillPurchasePrice(_purchaseArray: [Float])
+}

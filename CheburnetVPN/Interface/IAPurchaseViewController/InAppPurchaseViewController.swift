@@ -15,14 +15,26 @@ class InAppPurchaseViewController: UIViewController {
     var selectedIndex = 1
     
     let purchaseTypesArray = [LocalizationText.nameWeekPurchase, LocalizationText.nameMonthPurchase, LocalizationText.nameYearPurchase]
-    let purchasePricesArray = ["699.88", "849.88", "5 499.88"]
+    let purchasePeriodArray = ["В НЕДЕЛЮ", "В МЕСЯЦ", "В ГОД"]
     let namesDieWithPromotionArray = ["", LocalizationText.nameDieWithPopularPromotion, LocalizationText.nameDieWithCheapPromotion]
+    
+    var products: [Float] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         IAService.shared.getProducts()
         IAService.shared.restorePurchases()
+        products = IAService.shared.productsPrice
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(setupPriceLabel), name: NSNotification.Name(rawValue: "priceAdded"), object: nil)
+    }
+    
+    @objc func setupPriceLabel() {
+        DispatchQueue.main.async {
+            self.products = IAService.shared.productsPrice
+            self.collectionView.reloadData()
+        }
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -49,9 +61,13 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "purchaseCell", for: indexPath) as! PurchaseCollectionViewCell
         
-        cell.purchaseType.text = purchaseTypesArray[indexPath.row]
-        cell.purchasePrice.text = purchasePricesArray[indexPath.row] + " ₽" + " В МЕСЯЦ"
-        cell.nameDieWithPromotion.text = namesDieWithPromotionArray[indexPath.row]
+        if indexPath.row < products.count {
+        
+            cell.purchaseType.text = purchaseTypesArray[indexPath.row]
+            cell.purchasePrice.text = String(products[indexPath.row]) + "₽ " + purchasePeriodArray[indexPath.row]
+            //"₽ " + purchasePeriodArray[indexPath.row]
+            cell.nameDieWithPromotion.text = namesDieWithPromotionArray[indexPath.row]
+        }
 
         switch indexPath.row {
         case 0:
