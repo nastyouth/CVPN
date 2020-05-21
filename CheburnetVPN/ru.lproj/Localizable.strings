@@ -15,3 +15,6 @@
 "purchase_year_type" = "Годовая";
 "name_die_with_popular_promotion" = "Самый популярный";
 "name_die_with_cheap_promotion" = "Самый дешевый";
+"purchase_period_week" = "В НЕДЕЛЮ";
+"purchase_period_month" = "В МЕСЯЦ";
+"purchase_period_year" = "В ГОД";

@@ -16,7 +16,7 @@ class InAppPurchaseViewController: UIViewController {
     
     let purchaseTypesArray = [LocalizationText.nameWeekPurchase, LocalizationText.nameMonthPurchase, LocalizationText.nameYearPurchase]
     let purchasePeriodArray = ["В НЕДЕЛЮ", "В МЕСЯЦ", "В ГОД"]
-    let namesDieWithPromotionArray = ["", LocalizationText.nameDieWithPopularPromotion, LocalizationText.nameDieWithCheapPromotion]
+    let namesDieWithPromotionArray = ["", LocalizationText.nameDieWithPopularPromotion, LocalizationText.nameDieWithPopularPromotion]
     
     var products: [Float] = []
     

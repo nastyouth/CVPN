@@ -13,5 +13,8 @@
 "purchase_week_type" = "Semanal";
 "purchase_month_type" = "Mensual";
 "purchase_year_type" = "Anual";
-"name_die_with_popular_promotion" = "Самый популярный";
-"name_die_with_cheap_promotion" = "Самый дешевый";
+"name_die_with_popular_promotion" = "El más popular";
+"name_die_with_cheap_promotion" = "El más barato";
+"purchase_period_week" = "por semana";
+"purchase_period_month" = "por mes";
+"purchase_period_year" = "por año";

@@ -6,12 +6,15 @@
   Copyright © 2020 Apparat. All rights reserved.
 */
 
-"connect_to_VPN" = "Подключиться";
-"disconnect_to_VPN" = "Отключиться";
-"connecting_to_VPN" = "Подключение...";
-"disconnecting_to_VPN" = "Отключение...";
-"purchase_week_type" = "Недельная";
-"purchase_month_type" = "Месячная";
-"purchase_year_type" = "Годовая";
-"name_die_with_popular_promotion" = "Самый популярный";
-"name_die_with_cheap_promotion" = "Самый дешевый";
+"connect_to_VPN" = "Verbinden Sie";
+"disconnect_to_VPN" = "Verbindung trennen";
+"connecting_to_VPN" = "Verbinden...";
+"disconnecting_to_VPN" = "Abschalten...";
+"purchase_week_type" = "Wöchentlich";
+"purchase_month_type" = "Monatlich";
+"purchase_year_type" = "Jährlich";
+"name_die_with_popular_promotion" = "Beliebteste";
+"name_die_with_cheap_promotion" = "Günstigste";
+"purchase_period_week" = "pro Woche";
+"purchase_period_month" = "pro Monat";
+"purchase_period_year" = "pro Jahr";
