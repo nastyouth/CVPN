@@ -36,6 +36,7 @@ extension ServerViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ServerCell
+        
         let image = UIImage(named: servers[indexPath.row].rawValue)
         cell.flag.image = image
         cell.countryName.text = servers[indexPath.row].rawValue.capitalized

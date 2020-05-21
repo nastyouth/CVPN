@@ -92,7 +92,7 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     @IBAction func connectToVPN(_ sender: Any) {
         if (VPNManager.shared.isDisconnected) {
             let config = Configuration(
-                server: server ?? "dev0.4ebur.net",
+                server: userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net",
                 account: "nano",
                 password: "nanonano")
             

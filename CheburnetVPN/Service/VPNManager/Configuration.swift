@@ -49,5 +49,6 @@ class Configuration {
         def.set(server, forKey: Configuration.SERVER_KEY)
         def.set(account, forKey: Configuration.ACCOUNT_KEY)
         def.set(password, forKey: Configuration.PASSWORD_KEY)
+        print("server", server)
     }
 }
