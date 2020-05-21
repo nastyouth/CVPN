@@ -35,6 +35,7 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         }
     }
     
+    // FIXME
     func fillServer(_ server: String) {
         self.server = server
     }
@@ -95,8 +96,6 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
                 server: userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net",
                 account: "nano",
                 password: "nanonano")
-            
-            print("SERVER:", server ?? "All very bad :(")
             
             if !isAllowed {
                 segueToSetupYourVPNVC()
