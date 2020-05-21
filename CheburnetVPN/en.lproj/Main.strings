@@ -1,12 +1,21 @@
 
+/* Class = "UIButton"; normalTitle = "оценить приложение"; ObjectID = "08O-tf-G8h"; */
+"08O-tf-G8h.normalTitle" = "evaluate application";
+
 /* Class = "UIButton"; normalTitle = "выбрать сервер"; ObjectID = "2ZO-Eo-y9f"; */
 "2ZO-Eo-y9f.normalTitle" = "select a server";
+
+/* Class = "UIButton"; normalTitle = "Партнерская программа"; ObjectID = "2qn-fW-Udp"; */
+"2qn-fW-Udp.normalTitle" = "partnership program";
 
 /* Class = "UILabel"; text = "Первые 7 дней бесплатно"; ObjectID = "3FQ-6Y-yf3"; */
 "3FQ-6Y-yf3.text" = "First 7 days free";
 
 /* Class = "UILabel"; text = "Worldwide servers, enjoy faster service"; ObjectID = "3Z5-S4-dFX"; */
 "3Z5-S4-dFX.text" = "Worldwide servers, enjoy faster service";
+
+/* Class = "UIButton"; normalTitle = "условия использования"; ObjectID = "4Sy-Md-7Xb"; */
+"4Sy-Md-7Xb.normalTitle" = "conditions for use";
 
 /* Class = "UILabel"; text = "1. Tap Allow"; ObjectID = "8SI-5R-7ba"; */
 "8SI-5R-7ba.text" = "1. Tap Allow";
@@ -20,17 +29,23 @@
 /* Class = "UILabel"; text = "VPN Profile is necessary"; ObjectID = "DUT-xl-USO"; */
 "DUT-xl-USO.text" = "VPN Profile is necessary";
 
-/* Class = "UIButton"; normalTitle = "ОБНОВИТЕ СЕЙЧАС"; ObjectID = "DeY-XO-ygL"; */
-"DeY-XO-ygL.normalTitle" = "UPDATE NOW";
+/* Class = "UIButton"; normalTitle = "КУПИТЬ ПОДПИСКУ"; ObjectID = "DeY-XO-ygL"; */
+"DeY-XO-ygL.normalTitle" = "SUBSCRIBE";
 
 /* Class = "UILabel"; text = "Выбрать сервер"; ObjectID = "Llg-QA-k0o"; */
-"Llg-QA-k0o.text" = "Select server";
+"Llg-QA-k0o.text" = "Choose a server";
+
+/* Class = "UITextView"; text = "Предложение ограничено: каждому пользователю доступен только один 7-дневный пробный период. Если подписку не отменить до окончания 7-дневного периода, она будет продлена автоматически. Подписку можно отменить в любое время в настройках App Store Apple ID. Все цены указаны с учетом местных налогов на продажи. Платеж будет осуществлен с учетной записи iTunes при подтверждении покупки. Подписка продлится автоматически, если не отключить автоматическое продление за 24 часа до конца текущего периода. Плата за продление будет списана с вашей учетной записи в течение 24 часов до времени окончания текущей подписки. Неиспользованная часть бесплатного пробного периода при ее наличии утрачивается, если пользователь приобретает подписку на данную публикацию."; ObjectID = "MmY-Ea-sTK"; */
+"MmY-Ea-sTK.text" = "The offer is limited: each user has only one 7-day trial period available. If the subscription is not cancelled before the end of the 7-day trial period, it will be renewed automatically. You can cancel the subscription at any time in the App Store Apple ID settings. All prices are subject to local sales taxes. Payment will be made from your iTunes account when you confirm your purchase. The subscription will continue automatically unless you turn off automatic renewal 24 hours before the end of the current period. The renewal fee will be deducted from your account within 24 hours of the end of the current subscription. The unused portion of the free trial period, if any, will be lost if a user purchases a subscription to this publication.";
 
 /* Class = "UILabel"; text = "USA"; ObjectID = "PqL-Gi-1OT"; */
 "PqL-Gi-1OT.text" = "USA";
 
 /* Class = "UILabel"; text = "SETUP YOUR VPN"; ObjectID = "RsA-lf-CM0"; */
 "RsA-lf-CM0.text" = "SETUP YOUR VPN";
+
+/* Class = "UIButton"; normalTitle = "тарифы"; ObjectID = "Td0-zH-dhX"; */
+"Td0-zH-dhX.normalTitle" = "tariffs";
 
 /* Class = "UILabel"; text = "VPN Master would like to add configuration"; ObjectID = "TpQ-qI-yfk"; */
 "TpQ-qI-yfk.text" = "VPN Master would like to add configuration";
@@ -53,8 +68,8 @@
 /* Class = "UILabel"; text = "Ошибка"; ObjectID = "ith-AG-E9U"; */
 "ith-AG-E9U.text" = "Error";
 
-/* Class = "UILabel"; text = "в месяц оплата ежемесячно"; ObjectID = "l0l-jc-UZS"; */
-"l0l-jc-UZS.text" = "monthly payment";
+/* Class = "UILabel"; text = "Когда закончится пробный период"; ObjectID = "l0l-jc-UZS"; */
+"l0l-jc-UZS.text" = "When the trial period is over";
 
 /* Class = "UILabel"; text = "Подписка"; ObjectID = "lpE-fb-1sd"; */
 "lpE-fb-1sd.text" = "Subscription";
@@ -62,11 +77,14 @@
 /* Class = "UILabel"; text = "Без обязательств. Можете прекратить в любое время"; ObjectID = "oif-Jt-P33"; */
 "oif-Jt-P33.text" = "No obligation. You can stop at any time.";
 
+/* Class = "UIButton"; normalTitle = "помощь"; ObjectID = "qkd-rj-iOJ"; */
+"qkd-rj-iOJ.normalTitle" = "Support";
+
 /* Class = "UILabel"; text = "699.88 Р"; ObjectID = "rAz-AZ-kqs"; */
 "rAz-AZ-kqs.text" = "699.88 Р";
 
 /* Class = "UILabel"; text = "Выбрать сервер"; ObjectID = "rSh-WI-FCS"; */
 "rSh-WI-FCS.text" = "Select server";
 
-/* Class = "UILabel"; text = "Предложение ограничено: каждому пользователю доступен только один 7-дневный пробный период. Если подписку не отменить до окончания 7-дневного периода, она будет продлена автоматически. Подписку можно отменить в любое время в настройках App Store Apple ID. Все цены указаны с учетом местных налогов на продажи. Платеж будет осуществлен с учетной записи iTunes при подтверждении покупки. Подписка продлится автоматически, если не отключить автоматическое продление за 24 часа до конца текущего периода. Плата за продление будет списана с вашей учетной записи в течение 24 часов до времени окончания текущей подписки. Неиспользованная часть бесплатного пробного периода при ее наличии утрачивается, если пользователь приобретает подписку на данную публикацию."; ObjectID = "v7n-bY-vD0"; */
-"v7n-bY-vD0.text" = "The offer is limited: each user has only one 7-day trial period available. If the subscription is not cancelled before the end of the 7-day trial period, it will be renewed automatically. You can cancel the subscription at any time in the App Store Apple ID settings. All prices are subject to local sales taxes. Payment will be made from your iTunes account when you confirm your purchase. The subscription will continue automatically unless you turn off automatic renewal 24 hours before the end of the current period. The renewal fee will be deducted from your account within 24 hours of the end of the current subscription. The unused portion of the free trial period, if any, will be lost if a user purchases a subscription to this publication.";
+/* Class = "UIButton"; normalTitle = "восстановить покупки"; ObjectID = "sVQ-FJ-f4w"; */
+"sVQ-FJ-f4w.normalTitle" = "to restore the shopping";

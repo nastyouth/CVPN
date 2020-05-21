@@ -12,10 +12,11 @@ import StoreKit
 class InAppPurchaseViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var agreementTextField: UITextView!
     var selectedIndex = 1
     
     let purchaseTypesArray = [LocalizationText.nameWeekPurchase, LocalizationText.nameMonthPurchase, LocalizationText.nameYearPurchase]
-    let purchasePeriodArray = ["В НЕДЕЛЮ", "В МЕСЯЦ", "В ГОД"]
+    let purchasePeriodArray = [LocalizationText.purchasePeriodWeek, LocalizationText.purchasePeriodMonth, LocalizationText.purchasePeriodYear]
     let namesDieWithPromotionArray = ["", LocalizationText.nameDieWithPopularPromotion, LocalizationText.nameDieWithPopularPromotion]
     
     var products: [Float] = []
@@ -25,9 +26,11 @@ class InAppPurchaseViewController: UIViewController {
         collectionView.dataSource = self
         IAService.shared.getProducts()
         IAService.shared.restorePurchases()
-        products = IAService.shared.productsPrice
         
+        products = IAService.shared.productsPrice
         NotificationCenter.default.addObserver(self, selector: #selector(setupPriceLabel), name: NSNotification.Name(rawValue: "priceAdded"), object: nil)
+        
+        agreementTextField.text = LocalizationText.agreement
     }
     
     @objc func setupPriceLabel() {
@@ -65,7 +68,6 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
         
             cell.purchaseType.text = purchaseTypesArray[indexPath.row]
             cell.purchasePrice.text = String(products[indexPath.row]) + "₽ " + purchasePeriodArray[indexPath.row]
-            //"₽ " + purchasePeriodArray[indexPath.row]
             cell.nameDieWithPromotion.text = namesDieWithPromotionArray[indexPath.row]
         }
 

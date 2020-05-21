@@ -547,7 +547,7 @@
                                             <constraint firstAttribute="width" constant="250" id="FQi-wv-kRi"/>
                                             <constraint firstAttribute="height" constant="46" id="Km5-hH-ucu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
                                         <state key="normal" title="Партнерская программа">
                                             <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -575,7 +575,7 @@
                                             <constraint firstAttribute="height" constant="46" id="Sul-DC-A4X"/>
                                             <constraint firstAttribute="width" constant="250" id="fYJ-lg-Hlv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
                                         <state key="normal" title="тарифы">
                                             <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -604,7 +604,7 @@
                                             <constraint firstAttribute="width" constant="250" id="4Lq-d7-Hef"/>
                                             <constraint firstAttribute="height" constant="46" id="Frp-iT-5L5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
                                         <state key="normal" title="помощь">
                                             <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -632,7 +632,7 @@
                                             <constraint firstAttribute="height" constant="46" id="S7O-Ne-BNp"/>
                                             <constraint firstAttribute="width" constant="250" id="aC1-UR-egM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
                                         <state key="normal" title="оценить приложение">
                                             <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -660,7 +660,7 @@
                                             <constraint firstAttribute="height" constant="46" id="4iU-NG-gCc"/>
                                             <constraint firstAttribute="width" constant="250" id="Ruv-eq-lpi"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
                                         <state key="normal" title="восстановить покупки">
                                             <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -688,7 +688,7 @@
                                             <constraint firstAttribute="width" constant="250" id="A1x-yj-0Cf"/>
                                             <constraint firstAttribute="height" constant="46" id="Wzd-pZ-g9e"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
                                         <state key="normal" title="условия использования">
                                             <color key="titleColor" red="0.97624524109999999" green="0.97624524109999999" blue="0.97624524109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -769,8 +769,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seleccionar servidor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpE-fb-1sd">
-                                        <rect key="frame" x="68" y="8" width="239" height="34.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подписка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpE-fb-1sd">
+                                        <rect key="frame" x="132" y="8" width="111" height="34.5"/>
                                         <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -810,15 +810,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.41739487650000001" green="0.067554339769999999" blue="0.039167508480000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="lpE-fb-1sd" firstAttribute="top" secondItem="bxS-Ef-PFr" secondAttribute="top" constant="8" id="AGj-jR-Q0V"/>
                                     <constraint firstItem="AWF-kf-wOt" firstAttribute="top" secondItem="bxS-Ef-PFr" secondAttribute="top" constant="19" id="CQ3-vi-hrS"/>
+                                    <constraint firstItem="lpE-fb-1sd" firstAttribute="leading" secondItem="6C0-ro-xun" secondAttribute="trailing" constant="91" id="HK4-bq-088"/>
                                     <constraint firstItem="oli-n8-NGI" firstAttribute="leading" secondItem="AWF-kf-wOt" secondAttribute="trailing" constant="-90" id="MjN-o6-Mvf"/>
-                                    <constraint firstItem="mHu-JA-WUJ" firstAttribute="leading" secondItem="AWF-kf-wOt" secondAttribute="leading" id="R5Y-PK-3uU"/>
-                                    <constraint firstItem="lpE-fb-1sd" firstAttribute="top" secondItem="bxS-Ef-PFr" secondAttribute="topMargin" id="Vhv-Nv-Pe2"/>
-                                    <constraint firstItem="lpE-fb-1sd" firstAttribute="centerX" secondItem="bxS-Ef-PFr" secondAttribute="centerX" id="bXO-dB-jp5"/>
-                                    <constraint firstItem="lpE-fb-1sd" firstAttribute="centerX" secondItem="bxS-Ef-PFr" secondAttribute="centerX" id="jzd-MB-Pw6"/>
+                                    <constraint firstItem="oli-n8-NGI" firstAttribute="top" secondItem="lpE-fb-1sd" secondAttribute="bottom" constant="16.5" id="T5V-00-xf6"/>
+                                    <constraint firstItem="lpE-fb-1sd" firstAttribute="centerX" secondItem="bxS-Ef-PFr" secondAttribute="centerX" id="Wr2-Gk-mJR"/>
                                     <constraint firstItem="AWF-kf-wOt" firstAttribute="leading" secondItem="bxS-Ef-PFr" secondAttribute="leading" constant="16" id="m22-TD-OMF"/>
-                                    <constraint firstItem="3FQ-6Y-yf3" firstAttribute="top" secondItem="lpE-fb-1sd" secondAttribute="bottom" constant="16.5" id="pIC-E5-ukv"/>
-                                    <constraint firstItem="lpE-fb-1sd" firstAttribute="centerY" secondItem="6C0-ro-xun" secondAttribute="centerY" id="wyG-YZ-lDJ"/>
+                                    <constraint firstItem="lpE-fb-1sd" firstAttribute="centerY" secondItem="mHu-JA-WUJ" secondAttribute="centerY" id="vU2-po-IhK"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nRy-oR-HNz">
@@ -867,10 +866,10 @@
                                                             <color key="textColor" red="0.98861833759999995" green="0.98861833759999995" blue="0.98861833759999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wöchentlich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2l-XB-VEa">
-                                                            <rect key="frame" x="13" y="18" width="90" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Недельная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2l-XB-VEa">
+                                                            <rect key="frame" x="19" y="18" width="84" height="20.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="IKN-jx-HP2"/>
+                                                                <constraint firstAttribute="width" constant="84" id="IKN-jx-HP2"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -880,7 +879,7 @@
                                                     <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="B2l-XB-VEa" firstAttribute="top" secondItem="rAz-AZ-kqs" secondAttribute="bottom" constant="-20.333333333333329" id="5Wy-7j-SGe"/>
-                                                        <constraint firstItem="B2l-XB-VEa" firstAttribute="leading" secondItem="vt1-7b-6rN" secondAttribute="leading" constant="13" id="8Qw-cW-iGz"/>
+                                                        <constraint firstItem="B2l-XB-VEa" firstAttribute="leading" secondItem="vt1-7b-6rN" secondAttribute="leading" constant="19" id="8Qw-cW-iGz"/>
                                                         <constraint firstItem="8IB-Iw-9S6" firstAttribute="top" secondItem="vt1-7b-6rN" secondAttribute="top" id="E0E-0t-WXZ"/>
                                                         <constraint firstAttribute="width" constant="334" id="Eb5-ku-9z2"/>
                                                         <constraint firstItem="l0l-jc-UZS" firstAttribute="top" secondItem="vt1-7b-6rN" secondAttribute="top" constant="38" id="LQs-TR-SM3"/>
@@ -1020,7 +1019,7 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmY-Ea-sTK">
                                 <rect key="frame" x="52" y="536" width="271" height="111"/>
-                                <mutableString key="text">Предложение ограничено: каждому пользователю доступен только один 7-дневный пробный период. Если подписку не отменить до окончания 7-дневного периода, она будет продлена автоматически. Подписку можно отменить в любое время в настройках App Store Apple ID. Все цены указаны с учетом местных налогов на продажи. Платеж будет осуществлен с учетной записи iTunes при подтверждении покупки. Подписка продлится автоматически, если не отключить автоматическое продление за 24 часа до конца текущего периода. Плата за продление будет списана с вашей учетной записи в течение 24 часов до времени окончания текущей подписки. Неиспользованная часть бесплатного пробного периода при ее наличии утрачивается, если пользователь приобретает подписку на данную публикацию.</mutableString>
+                                <string key="text">Предложение ограничено: каждому пользователю доступен только один 7-дневный пробный период. Если подписку не отменить до окончания 7-дневного периода, она будет продлена автоматически. Подписку можно отменить в любое время в настройках App Store Apple ID. Все цены указаны с учетом местных налогов на продажи. Платеж будет осуществлен с учетной записи iTunes при подтверждении покупки. Подписка продлится автоматически, если не отключить автоматическое продление за 24 часа до конца текущего периода. Плата за продление будет списана с вашей учетной записи в течение 24 часов до времени окончания текущей подписки. Неиспользованная часть бесплатного пробного периода при ее наличии утрачивается, если пользователь приобретает подписку на данную публикацию.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1050,7 +1049,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z8x-qe-d96"/>
                     <connections>
-                        <outlet property="agreementTextField" destination="MmY-Ea-sTK" id="Csj-7A-7x5"/>
                         <outlet property="collectionView" destination="nRy-oR-HNz" id="U0Q-1t-Bax"/>
                     </connections>
                 </viewController>
@@ -1072,6 +1070,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nLg-hx-3Cc"/>
+        <segue reference="jPe-Ua-Pls"/>
     </inferredMetricsTieBreakers>
 </document>

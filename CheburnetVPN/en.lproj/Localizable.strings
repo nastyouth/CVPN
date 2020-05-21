@@ -18,3 +18,4 @@
 "purchase_period_week" = "a week";
 "purchase_period_month" = "a month";
 "purchase_period_year" = "a year";
+"agreement_purchase" = "The offer is limited: each user has only one 7-day trial period available. If the subscription is not cancelled before the end of the 7-day trial period, it will be renewed automatically. You can cancel the subscription at any time in the App Store Apple ID settings. All prices are subject to local sales taxes. Payment will be made from your iTunes account when you confirm your purchase. The subscription will continue automatically unless you turn off automatic renewal 24 hours before the end of the current period. The renewal fee will be deducted from your account within 24 hours of the end of the current subscription. The unused portion of the free trial period, if any, will be lost if a user purchases a subscription to this publication.";

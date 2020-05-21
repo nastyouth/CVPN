@@ -22,4 +22,5 @@ struct LocalizationText {
     static let purchasePeriodWeek = NSLocalizedString("purchase_period_week", comment: "")
     static let purchasePeriodMonth = NSLocalizedString("purchase_period_month", comment: "")
     static let purchasePeriodYear = NSLocalizedString("purchase_period_year", comment: "")
+    static let agreement = NSLocalizedString("agreement_purchase", comment: "")
 }
