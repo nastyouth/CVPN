@@ -16,7 +16,7 @@ class SetupYourVPNViewController: UIViewController {
         // FIXME: копипаст кода
         if (VPNManager.shared.isDisconnected) {
             let config = Configuration(
-                server: "ikev2.korzh.pro",
+                server: "dev0.4ebur.net",
                 account: "nano",
                 password: "nanonano")
             VPNManager.shared.connectIKEv2(config: config) { error in

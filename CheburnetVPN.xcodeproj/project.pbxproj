@@ -23,6 +23,7 @@
 		5D42D67F246448CE00910A17 /* LocalizationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D42D67E246448CE00910A17 /* LocalizationText.swift */; };
 		5D42D68224644A7800910A17 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D42D68424644A7800910A17 /* Localizable.strings */; };
 		5D4989442462C0A4005CCAB1 /* SetupYourVPNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4989432462C0A4005CCAB1 /* SetupYourVPNViewController.swift */; };
+		5D6DEFEC24768FB200CAFD6A /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DEFEB24768FB200CAFD6A /* Server.swift */; };
 		5D8BC56E245835C4008218E6 /* InAppPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */; };
 		5D8BC57024583BB4008218E6 /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */; };
 		5DA8CC2824658CA8006303EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8CC2724658CA8006303EA /* MenuViewController.swift */; };
@@ -66,6 +67,7 @@
 		5D42D68B2464579100910A17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		5D42D68C2464587A00910A17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D4989432462C0A4005CCAB1 /* SetupYourVPNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupYourVPNViewController.swift; sourceTree = "<group>"; };
+		5D6DEFEB24768FB200CAFD6A /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		5D7CBED524C03165E4F6731E /* Pods-CheburnetVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheburnetVPN.debug.xcconfig"; path = "Target Support Files/Pods-CheburnetVPN/Pods-CheburnetVPN.debug.xcconfig"; sourceTree = "<group>"; };
 		5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseViewController.swift; sourceTree = "<group>"; };
 		5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		5D6ECCBD247554AB00DEE19A /* VPNManager */ = {
 			isa = PBXGroup;
 			children = (
+				5D6DEFEB24768FB200CAFD6A /* Server.swift */,
 				5D4085D1245B699100277226 /* VPNManager.swift */,
 				5D4085D3245B69B000277226 /* Configuration.swift */,
 				5D4085D5245B69F000277226 /* Observer.swift */,
@@ -405,6 +408,7 @@
 				5D42D67F246448CE00910A17 /* LocalizationText.swift in Sources */,
 				5D4085D2245B699100277226 /* VPNManager.swift in Sources */,
 				5D8BC56E245835C4008218E6 /* InAppPurchaseViewController.swift in Sources */,
+				5D6DEFEC24768FB200CAFD6A /* Server.swift in Sources */,
 				5DECCA8E2456EE1400D45308 /* ViewController.swift in Sources */,
 				5D8BC57024583BB4008218E6 /* PurchaseCollectionViewCell.swift in Sources */,
 				5D4085E5245EE57100277226 /* IAService.swift in Sources */,

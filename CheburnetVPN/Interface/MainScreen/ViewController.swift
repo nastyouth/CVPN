@@ -70,9 +70,11 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         case .disconnected, .invalid, .reasserting:
             connectButton.setTitle(LocalizationText.connect, for: .normal)
             connectStatus.isHidden = true
+            connectImageView.image = UIImage(named:"Seq_0")
         case .connected:
             connectStatus.isHidden = true
             connectButton.setTitle(LocalizationText.disconnect, for: .normal)
+            connectImageView.image = UIImage(named:"Seq_59")
         case .connecting:
             connectAnimation(imageArray: animationImages)
             self.connectStatus.text = LocalizationText.connecting
@@ -88,12 +90,14 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     }
     
     @IBAction func connectToVPN(_ sender: Any) {
-        print(server ?? "Not found server name")
         if (VPNManager.shared.isDisconnected) {
             let config = Configuration(
                 server: server ?? "dev0.4ebur.net",
                 account: "nano",
                 password: "nanonano")
+            
+            print("SERVER:", server ?? "All very bad :(")
+            
             if !isAllowed {
                 segueToSetupYourVPNVC()
             }
