@@ -50,7 +50,7 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "purchaseCell", for: indexPath) as! PurchaseCollectionViewCell
         
         cell.purchaseType.text = purchaseTypesArray[indexPath.row]
-        cell.purchasePrice.text = purchasePricesArray[indexPath.row] + " Р"
+        cell.purchasePrice.text = purchasePricesArray[indexPath.row] + " ₽" + " В МЕСЯЦ"
         cell.nameDieWithPromotion.text = namesDieWithPromotionArray[indexPath.row]
 
         switch indexPath.row {

@@ -53,8 +53,8 @@
 /* Class = "UILabel"; text = "Ошибка"; ObjectID = "ith-AG-E9U"; */
 "ith-AG-E9U.text" = "Ошибка";
 
-/* Class = "UILabel"; text = "в месяц оплата ежемесячно"; ObjectID = "l0l-jc-UZS"; */
-"l0l-jc-UZS.text" = "в месяц оплата ежемесячно";
+/* Class = "UILabel"; text = "Когда закончится пробный период"; ObjectID = "l0l-jc-UZS"; */
+"l0l-jc-UZS.text" = "Когда закончится пробный период";
 
 /* Class = "UILabel"; text = "Подписка"; ObjectID = "lpE-fb-1sd"; */
 "lpE-fb-1sd.text" = "Подписка";
