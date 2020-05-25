@@ -13,11 +13,13 @@ class InAppPurchaseViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var agreementTextField: UITextView!
+    @IBOutlet weak var buyPurchaseButton: customButton!
+    
     var selectedIndex = 1
     
     let purchaseTypesArray = [LocalizationText.nameWeekPurchase, LocalizationText.nameMonthPurchase, LocalizationText.nameYearPurchase]
     let purchasePeriodArray = [LocalizationText.purchasePeriodWeek, LocalizationText.purchasePeriodMonth, LocalizationText.purchasePeriodYear]
-    let namesDieWithPromotionArray = ["", LocalizationText.nameDieWithPopularPromotion, LocalizationText.nameDieWithPopularPromotion]
+    let namesDieWithPromotionArray = ["", LocalizationText.nameDieWithPopularPromotion, LocalizationText.nameDieWithMostAdvantageousPromotion]
     
     var products: [Float] = []
     
@@ -29,7 +31,7 @@ class InAppPurchaseViewController: UIViewController {
         
         products = IAService.shared.productsPrice
         NotificationCenter.default.addObserver(self, selector: #selector(setupPriceLabel), name: NSNotification.Name(rawValue: "priceAdded"), object: nil)
-        
+        buyPurchaseButton.backgroundColor = #colorLiteral(red: 0.2583432496, green: 0.6105024219, blue: 0, alpha: 1)
         agreementTextField.text = LocalizationText.agreement
     }
     
@@ -64,8 +66,9 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "purchaseCell", for: indexPath) as! PurchaseCollectionViewCell
         
-        if indexPath.row < products.count {
         
+        if indexPath.row < products.count {
+            products.sort()
             cell.purchaseType.text = purchaseTypesArray[indexPath.row]
             cell.purchasePrice.text = String(products[indexPath.row]) + "₽ " + purchasePeriodArray[indexPath.row]
             cell.nameDieWithPromotion.text = namesDieWithPromotionArray[indexPath.row]

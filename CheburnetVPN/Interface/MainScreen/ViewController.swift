@@ -14,18 +14,52 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     @IBOutlet weak var connectStatus: UILabel!
     @IBOutlet weak var connectButton: customButton!
     @IBOutlet weak var connectImageView: UIImageView!
+    @IBOutlet weak var flagImage: UIImageView!
+    @IBOutlet weak var nameFastestServer: UILabel!
     
     var server: String?
+    var serverName: String?
     
     var isAllowed: Bool = true
     let userDefaults = UserDefaults.standard
     var animationImages = [UIImage]()
+    
+    func fillServerData(_ server: String, _ serverName: String) {
+        self.server = server
+        self.serverName = serverName
+        self.connect()
+        
+        DispatchQueue.main.async {
+            self.flagImage.image = UIImage(named: "\(self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")")
+            self.nameFastestServer.text = self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? ""
+        }
+    }
+    
+    func connect() {
+        let config = Configuration(
+                       server: server ?? "dev0.4ebur.net",
+                       account: "nano",
+                       password: "nanonano")
+        vpnStateChanged(status: VPNManager.shared.status)
+     
+        VPNManager.shared.connectIKEv2(config: config) { error in
+            self.isAllowed = false
+            self.userDefaults.set(false, forKey: "isAllowed")
+            self.isAllowed = self.userDefaults.bool(forKey: "isAllowed")
+        }
+                   
+        config.saveToDefaults()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         vpnStateChanged(status: VPNManager.shared.status)
         VPNManager.shared.statusEvent.attach(self, ViewController.vpnStateChanged)
         fillingAnimationImagesArray()
+        //А
+        server = userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net"
+        self.flagImage.image = UIImage(named: "\(self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")")
+        self.nameFastestServer.text = self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? ""
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,11 +67,6 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
             let destanationVC = segue.destination as? ServerViewController
             destanationVC?.delegate = self
         }
-    }
-    
-    // FIXME
-    func fillServer(_ server: String) {
-        self.server = server
     }
     
     func segueToSetupYourVPNVC() {
@@ -93,7 +122,7 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     @IBAction func connectToVPN(_ sender: Any) {
         if (VPNManager.shared.isDisconnected) {
             let config = Configuration(
-                server: userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net",
+                server: server ?? "dev0.4ebur.net",
                 account: "nano",
                 password: "nanonano")
             

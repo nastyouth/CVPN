@@ -39,15 +39,17 @@ extension ServerViewController: UITableViewDelegate, UITableViewDataSource {
         
         let image = UIImage(named: servers[indexPath.row].rawValue)
         cell.flag.image = image
-        cell.countryName.text = servers[indexPath.row].rawValue.capitalized
-        
+        cell.countryName.text = servers[indexPath.row].rawValue
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let server = servers[indexPath.row].server
+        let serverName = servers[indexPath.row].rawValue
         UserDefaults.standard.set(server, forKey: Configuration.SERVER_KEY)
-        delegate?.fillServer(server)
+        UserDefaults.standard.set(serverName, forKey: Configuration.SERVERNAME_KEY)
+        delegate?.fillServerData(server, serverName)
         dismiss(animated: true, completion: nil)
     }
 }

@@ -106,7 +106,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="N45-h7-eRg">
                                 <rect key="frame" x="89" y="432" width="197" height="25"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="oAJ-nC-vgb">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="oAJ-nC-vgb">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="kY4-hv-b3v"/>
@@ -166,6 +166,8 @@
                         <outlet property="connectButton" destination="AbM-Ur-Ahq" id="aJE-k3-cPL"/>
                         <outlet property="connectImageView" destination="2UA-GI-D7G" id="Geg-kr-Ri2"/>
                         <outlet property="connectStatus" destination="ith-AG-E9U" id="7tn-n7-UkX"/>
+                        <outlet property="flagImage" destination="oAJ-nC-vgb" id="Geh-jw-9xp"/>
+                        <outlet property="nameFastestServer" destination="ZWp-Pb-gSs" id="xeC-mZ-OHD"/>
                         <segue destination="GUj-Ql-jxy" kind="show" identifier="setupYourVPN" id="KWs-cY-uEA"/>
                     </connections>
                 </viewController>
@@ -183,7 +185,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-XO-ygL" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
                                 <rect key="frame" x="52" y="534" width="270" height="50"/>
-                                <color key="backgroundColor" red="0.68671828509999999" green="0.13866752390000001" blue="0.090117640789999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.35492730140000001" green="0.60271817449999998" blue="0.0033316176850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="q7u-ld-8so"/>
                                 </constraints>
@@ -340,7 +342,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" name="Color-1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSepatatedButtonTitles" value=" Глобальный, Специальный"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSepatatedButtonTitles" value="   Глобальный,   Специальный"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -356,6 +358,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
                                         <color key="value" red="0.74917465449999998" green="0.15836918350000001" blue="0.1057996973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="lzText" value="server_segmented_control"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worldwide servers, enjoy faster service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Z5-S4-dFX">
@@ -407,14 +410,14 @@
                                 <color key="backgroundColor" red="0.47594428059999999" green="0.087270669640000006" blue="0.050925299530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-WM-7IX">
-                                <rect key="frame" x="-19.5" y="249" width="414" height="47"/>
+                                <rect key="frame" x="0.0" y="249.5" width="375" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VPN Master would like to add configuration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-qI-yfk">
-                                        <rect key="frame" x="113" y="6" width="188" height="35"/>
+                                        <rect key="frame" x="60" y="6" width="255" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="QKc-QB-QdQ"/>
-                                            <constraint firstAttribute="width" constant="188" id="Wmu-e4-mqj"/>
+                                            <constraint firstAttribute="width" constant="255" id="Opd-2L-R3n"/>
+                                            <constraint firstAttribute="height" constant="35" id="bcu-jU-eQX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -423,25 +426,25 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.41739487650000001" green="0.067554339769999999" blue="0.039167508480000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="TpQ-qI-yfk" firstAttribute="centerY" secondItem="YFZ-WM-7IX" secondAttribute="centerY" id="NAo-CQ-ksG"/>
-                                    <constraint firstItem="TpQ-qI-yfk" firstAttribute="centerX" secondItem="YFZ-WM-7IX" secondAttribute="centerX" id="RYa-82-y6V"/>
-                                    <constraint firstAttribute="height" constant="47" id="bfp-h8-hhI"/>
+                                    <constraint firstItem="TpQ-qI-yfk" firstAttribute="centerX" secondItem="YFZ-WM-7IX" secondAttribute="centerX" id="9cO-Se-ZvE"/>
+                                    <constraint firstAttribute="height" constant="47" id="apk-YZ-rFb"/>
+                                    <constraint firstItem="TpQ-qI-yfk" firstAttribute="centerY" secondItem="YFZ-WM-7IX" secondAttribute="centerY" id="k2W-UW-Oz5"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Enter Touch ID or Iphone Passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEu-2Q-Tfp">
-                                <rect key="frame" x="60.5" y="370" width="254" height="17.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Enter Touch ID or Iphone Passcode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEu-2Q-Tfp">
+                                <rect key="frame" x="60.5" y="370.5" width="254" height="17.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Tap Allow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SI-5R-7ba">
-                                <rect key="frame" x="144" y="198.5" width="87" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="1. Tap Allow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SI-5R-7ba">
+                                <rect key="frame" x="144" y="199" width="87" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKo-uC-Ibv" customClass="SegmentedControl" customModule="CheburnetVPN" customModuleProvider="target">
-                                <rect key="frame" x="45.5" y="314" width="284" height="39"/>
+                                <rect key="frame" x="45.5" y="314.5" width="284" height="39"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="Xv1-0j-vyd"/>
@@ -473,13 +476,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать сервер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-QA-k0o">
-                                <rect key="frame" x="75.5" y="25" width="224" height="34"/>
+                                <rect key="frame" x="75.5" y="25" width="224" height="35"/>
                                 <fontDescription key="fontDescription" name="Mastodon-Bold" family="Mastodon" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9SN-rN-YO5">
-                                <rect key="frame" x="63.5" y="110.5" width="248.5" height="53"/>
+                                <rect key="frame" x="63.5" y="111.5" width="248.5" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETUP YOUR VPN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-lf-CM0">
                                         <rect key="frame" x="0.0" y="0.0" width="248.5" height="34"/>
@@ -489,6 +492,9 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VPN Profile is necessary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-xl-USO">
                                         <rect key="frame" x="0.0" y="34" width="248.5" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="aKw-6Z-le7"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -506,21 +512,26 @@
                         </subviews>
                         <color key="backgroundColor" red="0.51887947320000005" green="0.095200128849999996" blue="0.05876409262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Th0-mZ-FON" firstAttribute="top" secondItem="7Yv-po-OXt" secondAttribute="top" constant="30" id="2K2-pK-1Z9"/>
-                            <constraint firstItem="DKo-uC-Ibv" firstAttribute="top" secondItem="YFZ-WM-7IX" secondAttribute="bottom" constant="18" id="2dV-lW-4z7"/>
-                            <constraint firstItem="Llg-QA-k0o" firstAttribute="top" secondItem="7Yv-po-OXt" secondAttribute="top" constant="25" id="3Uk-Nq-uMG"/>
-                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="top" secondItem="DKo-uC-Ibv" secondAttribute="bottom" constant="17" id="4hB-87-AdE"/>
-                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="top" secondItem="8SI-5R-7ba" secondAttribute="bottom" constant="31.333333333333343" id="9ZU-Zh-HT7"/>
-                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="leading" secondItem="8SI-5R-7ba" secondAttribute="trailing" constant="-250.33333333333331" id="9y3-OW-e4b"/>
-                            <constraint firstItem="Th0-mZ-FON" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" constant="20" id="HZi-gr-6Qn"/>
-                            <constraint firstItem="9SN-rN-YO5" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="J7P-32-BDR"/>
-                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="bbc-qa-TmD"/>
-                            <constraint firstItem="8SI-5R-7ba" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="c5g-A8-3dq"/>
-                            <constraint firstItem="DKo-uC-Ibv" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="hUe-Cd-AUp"/>
-                            <constraint firstItem="Llg-QA-k0o" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="jkQ-QP-XnH"/>
-                            <constraint firstItem="8SI-5R-7ba" firstAttribute="top" secondItem="DUT-xl-USO" secondAttribute="bottom" constant="35" id="r2T-NS-pKJ"/>
-                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="stt-kj-JbS"/>
-                            <constraint firstItem="9SN-rN-YO5" firstAttribute="top" secondItem="Llg-QA-k0o" secondAttribute="bottom" constant="51.666666666666657" id="xAN-dd-ATz"/>
+                            <constraint firstItem="Llg-QA-k0o" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="2fg-rK-gyX"/>
+                            <constraint firstItem="8SI-5R-7ba" firstAttribute="top" secondItem="DUT-xl-USO" secondAttribute="bottom" constant="34.5" id="C48-s1-9bD"/>
+                            <constraint firstItem="9SN-rN-YO5" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="CK1-Hy-c52"/>
+                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="HK6-8R-ySq"/>
+                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="IGA-he-JbP"/>
+                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="centerX" secondItem="eEu-2Q-Tfp" secondAttribute="centerX" id="Kfw-Vm-NGM"/>
+                            <constraint firstItem="DKo-uC-Ibv" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="NJS-bb-kG5"/>
+                            <constraint firstItem="DKo-uC-Ibv" firstAttribute="top" secondItem="YFZ-WM-7IX" secondAttribute="bottom" constant="18" id="Pen-9p-4Uw"/>
+                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" id="Rob-1e-Qor"/>
+                            <constraint firstItem="8SI-5R-7ba" firstAttribute="centerX" secondItem="wSG-an-Lga" secondAttribute="centerX" id="TI8-G3-Yym"/>
+                            <constraint firstItem="Llg-QA-k0o" firstAttribute="top" secondItem="7Yv-po-OXt" secondAttribute="top" constant="25" id="WgI-7h-A9z"/>
+                            <constraint firstItem="Th0-mZ-FON" firstAttribute="top" secondItem="7Yv-po-OXt" secondAttribute="top" constant="30" id="Z2a-XU-Q7y"/>
+                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="top" secondItem="DKo-uC-Ibv" secondAttribute="bottom" constant="17" id="eFI-l2-jCE"/>
+                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="top" secondItem="8SI-5R-7ba" secondAttribute="bottom" constant="31.5" id="fCP-Kb-75f"/>
+                            <constraint firstItem="Th0-mZ-FON" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" constant="20" id="hrL-Jh-oqC"/>
+                            <constraint firstItem="eEu-2Q-Tfp" firstAttribute="leading" secondItem="7Yv-po-OXt" secondAttribute="leading" constant="60.5" id="p0r-Tu-8tG"/>
+                            <constraint firstItem="7Yv-po-OXt" firstAttribute="trailing" secondItem="eEu-2Q-Tfp" secondAttribute="trailing" constant="60.5" id="p9k-qZ-n03"/>
+                            <constraint firstItem="9SN-rN-YO5" firstAttribute="top" secondItem="Llg-QA-k0o" secondAttribute="bottom" constant="51.5" id="pYc-y8-lEH"/>
+                            <constraint firstItem="YFZ-WM-7IX" firstAttribute="trailing" secondItem="7Yv-po-OXt" secondAttribute="trailing" id="rSv-PW-ubS"/>
+                            <constraint firstItem="Llg-QA-k0o" firstAttribute="centerY" secondItem="Th0-mZ-FON" secondAttribute="centerY" id="tO9-0R-fCa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Yv-po-OXt"/>
                     </view>
@@ -528,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMr-uj-2nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2166" y="116"/>
+            <point key="canvasLocation" x="2165.5999999999999" y="115.59220389805098"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="gtB-zO-xWK">
@@ -565,9 +576,6 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="partnershipProgram:" destination="UeY-A6-g0c" eventType="touchUpInside" id="azy-zL-Sen"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td0-zH-dhX" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="250" height="46"/>
@@ -737,6 +745,9 @@
                         <viewLayoutGuide key="safeArea" id="ivi-Dz-lbu"/>
                     </view>
                     <navigationItem key="navigationItem" id="gmA-Rb-3nJ"/>
+                    <connections>
+                        <outlet property="partnershipLabel" destination="2qn-fW-Udp" id="rDo-Yg-SEl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgf-hb-5Ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1015,12 +1026,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="buyPurchaseButton:" destination="ARf-hd-fmc" eventType="touchUpInside" id="QNx-j7-xUa"/>
                                     <action selector="payment:" destination="XAc-TF-970" eventType="touchUpInside" id="1U6-cU-ILn"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmY-Ea-sTK">
                                 <rect key="frame" x="52" y="536" width="271" height="111"/>
-                                <mutableString key="text">Предложение ограничено: каждому пользователю доступен только один 7-дневный пробный период. Если подписку не отменить до окончания 7-дневного периода, она будет продлена автоматически. Подписку можно отменить в любое время в настройках App Store Apple ID. Все цены указаны с учетом местных налогов на продажи. Платеж будет осуществлен с учетной записи iTunes при подтверждении покупки. Подписка продлится автоматически, если не отключить автоматическое продление за 24 часа до конца текущего периода. Плата за продление будет списана с вашей учетной записи в течение 24 часов до времени окончания текущей подписки. Неиспользованная часть бесплатного пробного периода при ее наличии утрачивается, если пользователь приобретает подписку на данную публикацию.</mutableString>
+                                <string key="text">Предложение ограничено: каждому пользователю доступен только один 7-дневный пробный период. Если подписку не отменить до окончания 7-дневного периода, она будет продлена автоматически. Подписку можно отменить в любое время в настройках App Store Apple ID. Все цены указаны с учетом местных налогов на продажи. Платеж будет осуществлен с учетной записи iTunes при подтверждении покупки. Подписка продлится автоматически, если не отключить автоматическое продление за 24 часа до конца текущего периода. Плата за продление будет списана с вашей учетной записи в течение 24 часов до времени окончания текущей подписки. Неиспользованная часть бесплатного пробного периода при ее наличии утрачивается, если пользователь приобретает подписку на данную публикацию.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1051,10 +1063,12 @@
                     <navigationItem key="navigationItem" id="Z8x-qe-d96"/>
                     <connections>
                         <outlet property="agreementTextField" destination="MmY-Ea-sTK" id="Csj-7A-7x5"/>
+                        <outlet property="buyPurchaseButton" destination="Z91-Jb-ghd" id="ay2-9z-wSg"/>
                         <outlet property="collectionView" destination="nRy-oR-HNz" id="U0Q-1t-Bax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXn-7C-aIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ARf-hd-fmc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1477.5999999999999" y="115.59220389805098"/>
         </scene>

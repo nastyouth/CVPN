@@ -18,7 +18,7 @@
 "4Sy-Md-7Xb.normalTitle" = "Nutzungsbedingungen";
 
 /* Class = "UILabel"; text = "1. Tap Allow"; ObjectID = "8SI-5R-7ba"; */
-"8SI-5R-7ba.text" = "1. tippen Sie auf Zulassen";
+"8SI-5R-7ba.text" = "1. Tippen Sie auf Zulassen";
 
 /* Class = "UIButton"; normalTitle = "Подключиться"; ObjectID = "AbM-Ur-Ahq"; */
 "AbM-Ur-Ahq.normalTitle" = "Verbinden Sie";
@@ -51,13 +51,13 @@
 "TpQ-qI-yfk.text" = "VPN Master möchte Konfiguration hinzufügen";
 
 /* Class = "UIButton"; normalTitle = "купить подписку"; ObjectID = "Z91-Jb-ghd"; */
-"Z91-Jb-ghd.normalTitle" = "abonnieren";
+"Z91-Jb-ghd.normalTitle" = "Abonnieren";
 
 /* Class = "UILabel"; text = "Самый быстрый сервер"; ObjectID = "ZWp-Pb-gSs"; */
 "ZWp-Pb-gSs.text" = "Schnellster Server";
 
 /* Class = "UILabel"; text = "2. Enter Touch ID or Iphone Passcode"; ObjectID = "eEu-2Q-Tfp"; */
-"eEu-2Q-Tfp.text" = "2. berührungsempfindliche ID oder Iphone Passcode eingeben";
+"eEu-2Q-Tfp.text" = "2. Berührungsempfindliche ID oder Iphone Passcode eingeben";
 
 /* Class = "UILabel"; text = "Самый популярный"; ObjectID = "iIu-Em-HmX"; */
 "iIu-Em-HmX.text" = "Beliebteste";
@@ -87,4 +87,4 @@
 "rSh-WI-FCS.text" = "Server auswählen";
 
 /* Class = "UIButton"; normalTitle = "восстановить покупки"; ObjectID = "sVQ-FJ-f4w"; */
-"sVQ-FJ-f4w.normalTitle" = "wieder einkaufen";
+"sVQ-FJ-f4w.normalTitle" = "Wieder einkaufen";

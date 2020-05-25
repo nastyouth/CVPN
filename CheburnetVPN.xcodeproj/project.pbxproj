@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EAFC2F8876A73EFEC8981FA /* Pods_CheburnetVPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA7667B1BAD4E84B495ACFE /* Pods_CheburnetVPN.framework */; };
+		4240B2DD01A9901714528F8E /* Pods_CheburnetVPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC02898A0C97C0463344276 /* Pods_CheburnetVPN.framework */; };
 		5D3906A22475CBE1006FADA9 /* ServerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3906A12475CBE1006FADA9 /* ServerViewControllerDelegate.swift */; };
 		5D4085CC245B3A2E00277226 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4085CA245B3A0D00277226 /* StoreKit.framework */; };
 		5D4085D2245B699100277226 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4085D1245B699100277226 /* VPNManager.swift */; };
@@ -26,10 +26,10 @@
 		5D6DEFEC24768FB200CAFD6A /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DEFEB24768FB200CAFD6A /* Server.swift */; };
 		5D8BC56E245835C4008218E6 /* InAppPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */; };
 		5D8BC57024583BB4008218E6 /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */; };
+		5D9284E92477F47E00D6D793 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D9284E82477F47E00D6D793 /* GoogleService-Info.plist */; };
 		5DA8CC2824658CA8006303EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8CC2724658CA8006303EA /* MenuViewController.swift */; };
 		5DC3242C24571C440079766A /* ServerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3242B24571C440079766A /* ServerCell.swift */; };
 		5DC3242E24571E7D0079766A /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3242D24571E7D0079766A /* SegmentedControl.swift */; };
-		5DCAA2CE2461B1F9009501DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DCAA2CD2461B1F9009501DF /* GoogleService-Info.plist */; };
 		5DCAA2D02461C2CC009501DF /* LogEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCAA2CF2461C2CC009501DF /* LogEvents.swift */; };
 		5DECCA8A2456EE1400D45308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECCA892456EE1400D45308 /* AppDelegate.swift */; };
 		5DECCA8C2456EE1400D45308 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECCA8B2456EE1400D45308 /* SceneDelegate.swift */; };
@@ -43,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		277D17A18AB8C75EB639A851 /* Pods-CheburnetVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheburnetVPN.release.xcconfig"; path = "Target Support Files/Pods-CheburnetVPN/Pods-CheburnetVPN.release.xcconfig"; sourceTree = "<group>"; };
+		4AC02898A0C97C0463344276 /* Pods_CheburnetVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheburnetVPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3906A12475CBE1006FADA9 /* ServerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewControllerDelegate.swift; sourceTree = "<group>"; };
 		5D4085CA245B3A0D00277226 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5D4085D1245B699100277226 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
@@ -64,7 +66,6 @@
 		5D42D68C2464587A00910A17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D4989432462C0A4005CCAB1 /* SetupYourVPNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupYourVPNViewController.swift; sourceTree = "<group>"; };
 		5D6DEFEB24768FB200CAFD6A /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
-		5D7CBED524C03165E4F6731E /* Pods-CheburnetVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheburnetVPN.debug.xcconfig"; path = "Target Support Files/Pods-CheburnetVPN/Pods-CheburnetVPN.debug.xcconfig"; sourceTree = "<group>"; };
 		5D8BC56D245835C4008218E6 /* InAppPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseViewController.swift; sourceTree = "<group>"; };
 		5D8BC56F24583BB4008218E6 /* PurchaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		5D9284CF2477360F00D6D793 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -74,10 +75,10 @@
 		5D9284E124773A9B00D6D793 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5D9284E224773AAD00D6D793 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		5D9284E5247740EB00D6D793 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		5D9284E82477F47E00D6D793 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DA8CC2724658CA8006303EA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5DC3242B24571C440079766A /* ServerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCell.swift; sourceTree = "<group>"; };
 		5DC3242D24571E7D0079766A /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
-		5DCAA2CD2461B1F9009501DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DCAA2CF2461C2CC009501DF /* LogEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEvents.swift; sourceTree = "<group>"; };
 		5DECCA862456EE1400D45308 /* CheburnetVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheburnetVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DECCA892456EE1400D45308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,8 +91,7 @@
 		5DECCAA12456F56900D45308 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5DECCAA32457018E00D45308 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5DECCAA52457128100D45308 /* ServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewController.swift; sourceTree = "<group>"; };
-		91F78F52DF53DE04914E5314 /* Pods-CheburnetVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheburnetVPN.release.xcconfig"; path = "Target Support Files/Pods-CheburnetVPN/Pods-CheburnetVPN.release.xcconfig"; sourceTree = "<group>"; };
-		EEA7667B1BAD4E84B495ACFE /* Pods_CheburnetVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheburnetVPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBF71387C297996F2E5DE631 /* Pods-CheburnetVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheburnetVPN.debug.xcconfig"; path = "Target Support Files/Pods-CheburnetVPN/Pods-CheburnetVPN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			files = (
 				5D4085CC245B3A2E00277226 /* StoreKit.framework in Frameworks */,
 				5D4085DB245B740200277226 /* NetworkExtension.framework in Frameworks */,
-				2EAFC2F8876A73EFEC8981FA /* Pods_CheburnetVPN.framework in Frameworks */,
+				4240B2DD01A9901714528F8E /* Pods_CheburnetVPN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +111,8 @@
 		297F59ECBA5FFDEA4028BA5E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D7CBED524C03165E4F6731E /* Pods-CheburnetVPN.debug.xcconfig */,
-				91F78F52DF53DE04914E5314 /* Pods-CheburnetVPN.release.xcconfig */,
+				DBF71387C297996F2E5DE631 /* Pods-CheburnetVPN.debug.xcconfig */,
+				277D17A18AB8C75EB639A851 /* Pods-CheburnetVPN.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			children = (
 				5D4085DA245B740200277226 /* NetworkExtension.framework */,
 				5D4085CA245B3A0D00277226 /* StoreKit.framework */,
-				EEA7667B1BAD4E84B495ACFE /* Pods_CheburnetVPN.framework */,
+				4AC02898A0C97C0463344276 /* Pods_CheburnetVPN.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 				5DECCA942456EE1600D45308 /* LaunchScreen.storyboard */,
 				5DECCA922456EE1600D45308 /* Assets.xcassets */,
 				5DECCAA12456F56900D45308 /* Colors.xcassets */,
-				5DCAA2CD2461B1F9009501DF /* GoogleService-Info.plist */,
+				5D9284E82477F47E00D6D793 /* GoogleService-Info.plist */,
 				5DECCA972456EE1600D45308 /* Info.plist */,
 			);
 			path = CheburnetVPN;
@@ -287,11 +287,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DECCA9A2456EE1600D45308 /* Build configuration list for PBXNativeTarget "CheburnetVPN" */;
 			buildPhases = (
-				9E7499CD5E6DD9E9236B3F9B /* [CP] Check Pods Manifest.lock */,
+				4A78C7F4B8C2CF2DE50BE1A9 /* [CP] Check Pods Manifest.lock */,
 				5DECCA822456EE1400D45308 /* Sources */,
 				5DECCA832456EE1400D45308 /* Frameworks */,
 				5DECCA842456EE1400D45308 /* Resources */,
-				FE89EDBFC8E1C5C0EC7B091F /* [CP] Embed Pods Frameworks */,
+				A6007E6B17EFCF1FAA6AFF01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,8 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DECCA962456EE1600D45308 /* LaunchScreen.storyboard in Resources */,
-				5DCAA2CE2461B1F9009501DF /* GoogleService-Info.plist in Resources */,
 				5DECCAA22456F56900D45308 /* Colors.xcassets in Resources */,
+				5D9284E92477F47E00D6D793 /* GoogleService-Info.plist in Resources */,
 				5D4085DF245C41C200277226 /* MASTODON.TTF in Resources */,
 				5D42D68224644A7800910A17 /* Localizable.strings in Resources */,
 				5DECCA932456EE1600D45308 /* Assets.xcassets in Resources */,
@@ -358,7 +358,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9E7499CD5E6DD9E9236B3F9B /* [CP] Check Pods Manifest.lock */ = {
+		4A78C7F4B8C2CF2DE50BE1A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,7 +380,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FE89EDBFC8E1C5C0EC7B091F /* [CP] Embed Pods Frameworks */ = {
+		A6007E6B17EFCF1FAA6AFF01 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -587,7 +587,7 @@
 		};
 		5DECCA9B2456EE1600D45308 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D7CBED524C03165E4F6731E /* Pods-CheburnetVPN.debug.xcconfig */;
+			baseConfigurationReference = DBF71387C297996F2E5DE631 /* Pods-CheburnetVPN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CheburnetVPN/CheburnetVPN.entitlements;
@@ -611,7 +611,7 @@
 		};
 		5DECCA9C2456EE1600D45308 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91F78F52DF53DE04914E5314 /* Pods-CheburnetVPN.release.xcconfig */;
+			baseConfigurationReference = 277D17A18AB8C75EB639A851 /* Pods-CheburnetVPN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CheburnetVPN/CheburnetVPN.entitlements;

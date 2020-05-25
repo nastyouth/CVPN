@@ -70,7 +70,7 @@ extension IAService: SKProductsRequestDelegate {
             productsPrice.append(Float(truncating: product.price))
             
             for invalidIdentifier in response.invalidProductIdentifiers {
-                    print("invalidIdentifier", invalidIdentifier)
+                print("invalidIdentifier", invalidIdentifier)
             }
         }
     }

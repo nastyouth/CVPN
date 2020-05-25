@@ -14,6 +14,7 @@ class SegmentedControl: UIControl {
     var buttons = [UIButton]()
     var selector: UIView!
     var selectedSegmentIndex = 0
+    var buttonTitles: [String] = []
     
     @IBInspectable
     var borderWidth: CGFloat = 0 {
@@ -70,13 +71,12 @@ class SegmentedControl: UIControl {
             updateView()
         }
     }
-    
+
     func updateView() {
         buttons.removeAll()
         subviews.forEach { $0.removeFromSuperview() }
         
-        let buttonTitles = commaSepatatedButtonTitles.components(separatedBy: ",")
-        
+        buttonTitles = commaSepatatedButtonTitles.components(separatedBy: ",")
         for buttonTitle in buttonTitles {
             let button = UIButton(type: .system)
             button.setTitle(buttonTitle, for: .normal)

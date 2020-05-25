@@ -14,6 +14,7 @@ class Configuration {
     static let PASSWORD_KEY = "PASSWORD_KEY"
     static let ONDEMAND_KEY = "ONDEMAND_KEY"
     static let PSK_KEY = "PSK_KEY"
+    static let SERVERNAME_KEY = "SERVERNAME_KEY"
     
     static let KEYCHAIN_PASSWORD_KEY = "KEYCHAIN_PASSWORD_KEY"
     static let KEYCHAIN_PSK_KEY = "KEYCHAIN_PSK_KEY"

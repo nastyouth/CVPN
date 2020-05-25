@@ -19,6 +19,10 @@ struct LocalizationText {
     static let nameYearPurchase = NSLocalizedString("purchase_year_type", comment: "")
     
     static let nameDieWithPopularPromotion = NSLocalizedString("name_die_with_popular_promotion", comment: "")
+    static let nameDieWithMostAdvantageousPromotion = NSLocalizedString("most_advantageous", comment: "")
+    
+    
+    
     static let purchasePeriodWeek = NSLocalizedString("purchase_period_week", comment: "")
     static let purchasePeriodMonth = NSLocalizedString("purchase_period_month", comment: "")
     static let purchasePeriodYear = NSLocalizedString("purchase_period_year", comment: "")

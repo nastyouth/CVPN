@@ -12,8 +12,11 @@ import StoreKit
 
 class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
+    @IBOutlet weak var partnershipLabel: customButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        partnershipLabel.isHidden = true
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -32,9 +35,9 @@ class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate 
             let composeVC = MFMailComposeViewController()
             composeVC.mailComposeDelegate = self
 
-            composeVC.setToRecipients(["address@example.com"])
-            composeVC.setSubject("Hello!")
-            composeVC.setMessageBody("Hello from California!", isHTML: false)
+            composeVC.setToRecipients(["help@softpanda.ru"])
+            composeVC.setSubject("Cheburnet VPN Help")
+            composeVC.setMessageBody("Hi Cheburnet VPN Team! ...", isHTML: false)
              
             present(composeVC, animated: true, completion: nil)
         }
@@ -55,7 +58,7 @@ class MenuViewController: UIViewController, MFMailComposeViewControllerDelegate 
     }
     
     @IBAction func termsOfUse(_ sender: Any) {
-        guard let url = URL(string: "https://google.com") else { return }
+        guard let url = URL(string: "http://softpanda.ru/privacy.html") else { return }
         UIApplication.shared.open(url)
     }
 }

@@ -12,13 +12,13 @@
 "3FQ-6Y-yf3.text" = "Первые 7 дней бесплатно";
 
 /* Class = "UILabel"; text = "Worldwide servers, enjoy faster service"; ObjectID = "3Z5-S4-dFX"; */
-"3Z5-S4-dFX.text" = "Worldwide servers, enjoy faster service";
+"3Z5-S4-dFX.text" = "Серверы по всему миру, наслаждайтесь более быстрым обслуживанием";
 
 /* Class = "UIButton"; normalTitle = "условия использования"; ObjectID = "4Sy-Md-7Xb"; */
 "4Sy-Md-7Xb.normalTitle" = "условия использования";
 
 /* Class = "UILabel"; text = "1. Tap Allow"; ObjectID = "8SI-5R-7ba"; */
-"8SI-5R-7ba.text" = "1. Tap Allow";
+"8SI-5R-7ba.text" = "1. Нажмите Разрешить";
 
 /* Class = "UIButton"; normalTitle = "Подключиться"; ObjectID = "AbM-Ur-Ahq"; */
 "AbM-Ur-Ahq.normalTitle" = "Подключиться";
@@ -27,7 +27,7 @@
 "B2l-XB-VEa.text" = "Недельная";
 
 /* Class = "UILabel"; text = "VPN Profile is necessary"; ObjectID = "DUT-xl-USO"; */
-"DUT-xl-USO.text" = "VPN Profile is necessary";
+"DUT-xl-USO.text" = "VPN профиль необходим";
 
 /* Class = "UIButton"; normalTitle = "КУПИТЬ ПОДПИСКУ"; ObjectID = "DeY-XO-ygL"; */
 "DeY-XO-ygL.normalTitle" = "КУПИТЬ ПОДПИСКУ";
@@ -42,13 +42,13 @@
 "PqL-Gi-1OT.text" = "USA";
 
 /* Class = "UILabel"; text = "SETUP YOUR VPN"; ObjectID = "RsA-lf-CM0"; */
-"RsA-lf-CM0.text" = "SETUP YOUR VPN";
+"RsA-lf-CM0.text" = "Выберите VPN";
 
 /* Class = "UIButton"; normalTitle = "тарифы"; ObjectID = "Td0-zH-dhX"; */
 "Td0-zH-dhX.normalTitle" = "тарифы";
 
 /* Class = "UILabel"; text = "VPN Master would like to add configuration"; ObjectID = "TpQ-qI-yfk"; */
-"TpQ-qI-yfk.text" = "VPN Master would like to add configuration";
+"TpQ-qI-yfk.text" = "Мастер VPN хотел бы добавить конфигурацию";
 
 /* Class = "UIButton"; normalTitle = "купить подписку"; ObjectID = "Z91-Jb-ghd"; */
 "Z91-Jb-ghd.normalTitle" = "купить подписку";
@@ -57,7 +57,7 @@
 "ZWp-Pb-gSs.text" = "Самый быстрый сервер";
 
 /* Class = "UILabel"; text = "2. Enter Touch ID or Iphone Passcode"; ObjectID = "eEu-2Q-Tfp"; */
-"eEu-2Q-Tfp.text" = "2. Enter Touch ID or Iphone Passcode";
+"eEu-2Q-Tfp.text" = "2. Введите Touch ID или Iphone пароль";
 
 /* Class = "UILabel"; text = "Самый популярный"; ObjectID = "iIu-Em-HmX"; */
 "iIu-Em-HmX.text" = "Самый популярный";
