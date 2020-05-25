@@ -18,45 +18,22 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     @IBOutlet weak var nameFastestServer: UILabel!
     
     var server: String?
-    var serverName: String?
+    var serverName: String? {
+        didSet {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "serverName"), object: nil)
+        }
+    }
     
     var isAllowed: Bool = true
     let userDefaults = UserDefaults.standard
     var animationImages = [UIImage]()
-    
-    func fillServerData(_ server: String, _ serverName: String) {
-        self.server = server
-        self.serverName = serverName
-        self.connect()
-        
-        DispatchQueue.main.async {
-            self.flagImage.image = UIImage(named: "\(self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")")
-            self.nameFastestServer.text = self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? ""
-        }
-    }
-    
-    func connect() {
-        let config = Configuration(
-                       server: server ?? "dev0.4ebur.net",
-                       account: "nano",
-                       password: "nanonano")
-        vpnStateChanged(status: VPNManager.shared.status)
-     
-        VPNManager.shared.connectIKEv2(config: config) { error in
-            self.isAllowed = false
-            self.userDefaults.set(false, forKey: "isAllowed")
-            self.isAllowed = self.userDefaults.bool(forKey: "isAllowed")
-        }
-                   
-        config.saveToDefaults()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         vpnStateChanged(status: VPNManager.shared.status)
         VPNManager.shared.statusEvent.attach(self, ViewController.vpnStateChanged)
         fillingAnimationImagesArray()
-        //А
+        //FIXME
         server = userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net"
         self.flagImage.image = UIImage(named: "\(self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")")
         self.nameFastestServer.text = self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? ""
@@ -73,14 +50,7 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         self.performSegue(withIdentifier: "setupYourVPN", sender: self)
     }
     
-    func checkIsAllowConnectToVPN() {
-        if !isAllowed {
-            segueToSetupYourVPNVC()
-            isAllowed = userDefaults.bool(forKey: "isAllowed")
-            print(isAllowed)
-        }
-    }
-
+    // MARK: - Connect/Disconnect animation
     func fillingAnimationImagesArray() {
         for i in 0...59 {
             let image: UIImage = UIImage(named:"Seq_\(i)")!
@@ -93,6 +63,24 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         connectImageView.animationDuration = 2.0
         connectImageView.animationRepeatCount = 1
         connectImageView.startAnimating()
+    }
+    
+    // MARK: - VPN connect
+    func checkIsAllowConnectToVPN() {
+        if !isAllowed {
+            segueToSetupYourVPNVC()
+            isAllowed = userDefaults.bool(forKey: "isAllowed")
+        }
+    }
+    
+    func fillServerData(_ server: String, _ serverName: String) {
+        self.server = server
+        self.serverName = serverName
+
+        DispatchQueue.main.async {
+            self.flagImage.image = UIImage(named: "\(self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")")
+            self.nameFastestServer.text = self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? ""
+        }
     }
 
     func vpnStateChanged(status: NEVPNStatus) {
@@ -135,7 +123,6 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
                 self.userDefaults.set(false, forKey: "isAllowed")
                 self.isAllowed = self.userDefaults.bool(forKey: "isAllowed")
             }
-            
             config.saveToDefaults()
         } else {
             VPNManager.shared.disconnect()

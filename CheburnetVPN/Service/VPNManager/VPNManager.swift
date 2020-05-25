@@ -49,6 +49,19 @@ final class VPNManager: NSObject {
     
     @objc private func VPNStatusDidChange(_: NSNotification?) {
         statusEvent.notify(status)
+        
+        switch status {
+        case .disconnected, .invalid, .reasserting:
+            print(status, "disconnected")
+        case .connected:
+            print(status, "connected")
+        case .connecting:
+            print(status, "connecting")
+        case .disconnecting:
+            print(status, "disconnecting")
+        @unknown default:
+            break
+        }
     }
     
     private func loadProfile(callback: ((Bool) -> Void)?) {
@@ -75,15 +88,15 @@ final class VPNManager: NSObject {
     }
     
     public func connectIKEv2(config: Configuration, onError: @escaping (String) -> Void) {
-        
+         print("NEVPNStatus", 9)
         let p = NEVPNProtocolIKEv2()
         
         p.serverAddress = config.server
-        p.disconnectOnSleep = false
         p.deadPeerDetectionRate = NEVPNIKEv2DeadPeerDetectionRate.medium
         p.username = config.account
         p.passwordReference = config.getPasswordRef()
 
+        p.disconnectOnSleep = false
         p.disableMOBIKE = false
         p.disableRedirect = false
         p.enableRevocationCheck = false
@@ -91,7 +104,7 @@ final class VPNManager: NSObject {
         p.useExtendedAuthentication = true
         p.useConfigurationAttributeInternalIPSubnet = false
         p.remoteIdentifier = config.server
-        
+
         loadProfile { _ in
             self.manager.protocolConfiguration = p
             self.manager.isEnabled = true

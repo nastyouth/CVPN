@@ -26,11 +26,16 @@ class InAppPurchaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        
         IAService.shared.getProducts()
         IAService.shared.restorePurchases()
         
         products = IAService.shared.productsPrice
-        NotificationCenter.default.addObserver(self, selector: #selector(setupPriceLabel), name: NSNotification.Name(rawValue: "priceAdded"), object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(setupPriceLabel),
+                                               name: NSNotification.Name(rawValue: "priceAdded"),
+                                               object: nil)
         buyPurchaseButton.backgroundColor = #colorLiteral(red: 0.2583432496, green: 0.6105024219, blue: 0, alpha: 1)
         agreementTextField.text = LocalizationText.agreement
     }
@@ -57,6 +62,7 @@ class InAppPurchaseViewController: UIViewController {
     }
 }
 
+// MARK: - CollectionView
 extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

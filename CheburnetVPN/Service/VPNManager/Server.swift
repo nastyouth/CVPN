@@ -32,4 +32,18 @@ enum Server: String, CaseIterable {
         case .london: return "london.4ebur.net"
         }
     }
+    
+    var countryCode: String {
+        switch self {
+        case .dev0: return "USA"
+        case .amsterdam: return "NLD"
+        case .stockholm: return "SWE"
+        case .newyork: return "USA"
+        case .chicago: return "USA"
+        case .oslo: return "NOR"
+        case .zurich: return "CHE"
+        case .vienna: return "AUT"
+        case .london: return "GBR"
+        }
+    }
 }

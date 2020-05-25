@@ -39,7 +39,7 @@ extension ServerViewController: UITableViewDelegate, UITableViewDataSource {
         
         let image = UIImage(named: servers[indexPath.row].rawValue)
         cell.flag.image = image
-        cell.countryName.text = servers[indexPath.row].rawValue
+        cell.countryName.text = servers[indexPath.row].countryCode + ", " + servers[indexPath.row].rawValue
 
         return cell
     }
