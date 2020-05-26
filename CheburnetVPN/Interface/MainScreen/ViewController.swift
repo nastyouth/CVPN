@@ -18,7 +18,6 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     @IBOutlet weak var nameFastestServer: UILabel!
     
     var server: String?
-    var serverName: String?
     
     var isAllowed: Bool = true
     let userDefaults = UserDefaults.standard
@@ -56,10 +55,18 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     }
     
     func connectAnimation<T>(imageArray: [T]) {
+        CATransaction.begin()
+        
+        CATransaction.setCompletionBlock({
+            self.checkEndConnection()
+        })
+        
         connectImageView.animationImages = imageArray as? [UIImage]
         connectImageView.animationDuration = 2.0
         connectImageView.animationRepeatCount = 1
         connectImageView.startAnimating()
+        
+        CATransaction.commit()
     }
     
     // MARK: - VPN connect
@@ -70,8 +77,27 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         }
     }
     
+    // MARK: Reconnection
+    func checkEndConnection() {
+        if self.server != self.userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net" {
+            if (VPNManager.shared.isDisconnected) {
+                let config = Configuration(
+                    server: self.server ?? "dev0.4ebur.net",
+                    account: "nano",
+                    password: "nanonano")
+                VPNManager.shared.connectIKEv2(config: config) { error in }
+                config.saveToDefaults()
+            }
+        }
+    }
+    
     func fillServerData(_ server: Server?) {
-        self.server = server?.rawValue
+        self.server = server?.server
+        
+        if self.server != userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net" && self.server != nil {
+            VPNManager.shared.disconnect()
+        }
+        
         DispatchQueue.main.async {
             self.flagImage.image = UIImage(named: server?.rawValue ?? "USA")
             self.nameFastestServer.text = server?.rawValue
