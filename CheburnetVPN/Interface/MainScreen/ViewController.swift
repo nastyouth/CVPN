@@ -10,7 +10,7 @@ import UIKit
 import NetworkExtension
 
 class ViewController: UIViewController, ServerViewControllerDelegate {
-    
+
     @IBOutlet weak var connectStatus: UILabel!
     @IBOutlet weak var connectButton: customButton!
     @IBOutlet weak var connectImageView: UIImageView!
@@ -18,11 +18,7 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     @IBOutlet weak var nameFastestServer: UILabel!
     
     var server: String?
-    var serverName: String? {
-        didSet {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "serverName"), object: nil)
-        }
-    }
+    var serverName: String?
     
     var isAllowed: Bool = true
     let userDefaults = UserDefaults.standard
@@ -33,9 +29,10 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         vpnStateChanged(status: VPNManager.shared.status)
         VPNManager.shared.statusEvent.attach(self, ViewController.vpnStateChanged)
         fillingAnimationImagesArray()
+        
         //FIXME
         server = userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net"
-        self.flagImage.image = UIImage(named: "\(self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")")
+        self.flagImage.image = UIImage(named: self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")
         self.nameFastestServer.text = self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? ""
     }
     
@@ -73,15 +70,14 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         }
     }
     
-    func fillServerData(_ server: String, _ serverName: String) {
-        self.server = server
-        self.serverName = serverName
-
+    func fillServerData(_ server: Server?) {
+        self.server = server?.rawValue
         DispatchQueue.main.async {
-            self.flagImage.image = UIImage(named: "\(self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")")
-            self.nameFastestServer.text = self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? ""
+            self.flagImage.image = UIImage(named: server?.rawValue ?? "USA")
+            self.nameFastestServer.text = server?.rawValue
         }
     }
+    
 
     func vpnStateChanged(status: NEVPNStatus) {
         switch status {

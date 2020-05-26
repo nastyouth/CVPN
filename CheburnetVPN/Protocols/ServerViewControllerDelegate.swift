@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ServerViewControllerDelegate {
-    func fillServerData(_ server: String, _ serverName: String)
+    func fillServerData(_ server: Server?)
 }
 
 protocol IAPurchaseDelegate {

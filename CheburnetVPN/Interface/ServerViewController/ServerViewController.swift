@@ -45,11 +45,8 @@ extension ServerViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let server = servers[indexPath.row].server
-        let serverName = servers[indexPath.row].rawValue
-        UserDefaults.standard.set(server, forKey: Configuration.SERVER_KEY)
-        UserDefaults.standard.set(serverName, forKey: Configuration.SERVERNAME_KEY)
-        delegate?.fillServerData(server, serverName)
+        UserDefaults.standard.set(servers[indexPath.row], forKey: "SERVERNAME_KEY")
+        delegate?.fillServerData(servers[indexPath.row])
         dismiss(animated: true, completion: nil)
     }
 }

@@ -22,6 +22,7 @@ class IAService: NSObject {
     var productsPrice: [Float] = [] {
         didSet {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "priceAdded"), object: nil)
+            print("PurchaseTest in Service, in didSet:", productsPrice)
         }
     }
     
@@ -67,10 +68,10 @@ extension IAService: SKProductsRequestDelegate {
         self.products = response.products
         for product in response.products {
             print(product.localizedTitle)
-            productsPrice.append(Float(truncating: product.price))
             
-            for invalidIdentifier in response.invalidProductIdentifiers {
-                print("invalidIdentifier", invalidIdentifier)
+            if productsPrice.count < products.count {
+                productsPrice.append(Float(truncating: product.price))
+                print("PurchaseTest in Service, in productsRequest:", productsPrice, "products.count", products.count)
             }
         }
     }

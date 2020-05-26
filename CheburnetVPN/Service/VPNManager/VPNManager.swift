@@ -88,7 +88,6 @@ final class VPNManager: NSObject {
     }
     
     public func connectIKEv2(config: Configuration, onError: @escaping (String) -> Void) {
-         print("NEVPNStatus", 9)
         let p = NEVPNProtocolIKEv2()
         
         p.serverAddress = config.server

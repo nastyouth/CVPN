@@ -31,7 +31,8 @@ class InAppPurchaseViewController: UIViewController {
         IAService.shared.restorePurchases()
         
         products = IAService.shared.productsPrice
-        
+        products.sort(by: <)
+    
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(setupPriceLabel),
                                                name: NSNotification.Name(rawValue: "priceAdded"),
@@ -43,6 +44,7 @@ class InAppPurchaseViewController: UIViewController {
     @objc func setupPriceLabel() {
         DispatchQueue.main.async {
             self.products = IAService.shared.productsPrice
+            self.products.sort()
             self.collectionView.reloadData()
         }
     }
@@ -72,9 +74,7 @@ extension InAppPurchaseViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "purchaseCell", for: indexPath) as! PurchaseCollectionViewCell
         
-        
         if indexPath.row < products.count {
-            products.sort()
             cell.purchaseType.text = purchaseTypesArray[indexPath.row]
             cell.purchasePrice.text = String(products[indexPath.row]) + "₽ " + purchasePeriodArray[indexPath.row]
             cell.nameDieWithPromotion.text = namesDieWithPromotionArray[indexPath.row]
