@@ -19,7 +19,7 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     
     var server: String?
     
-    var isAllowed: Bool = true
+    var isAllowed: Bool = false
     let userDefaults = UserDefaults.standard
     var animationImages = [UIImage]()
     
@@ -85,7 +85,16 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
                     server: self.server ?? "dev0.4ebur.net",
                     account: "nano",
                     password: "nanonano")
-                VPNManager.shared.connectIKEv2(config: config) { error in }
+                
+                if !isAllowed {
+                    segueToSetupYourVPNVC()
+                }
+                
+                VPNManager.shared.connectIKEv2(config: config) { error in
+                    self.isAllowed = false
+                    self.userDefaults.set(false, forKey: "isAllowed")
+                    self.isAllowed = self.userDefaults.bool(forKey: "isAllowed")
+                }
                 config.saveToDefaults()
             }
         }

@@ -20,6 +20,22 @@ class ServerViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    func changeButton(_ button: UIButton) {
+        let puchaseDate = UserDefaults.standard.value(forKey: "expDate") as? Date
+        let date = Date()
+        guard let expDate = puchaseDate else { return }
+
+        if (date < expDate) {
+            button.backgroundColor = #colorLiteral(red: 0.2583432496, green: 0.6105024219, blue: 0, alpha: 1)
+            button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+            button.setTitle("Подключен", for: .normal)
+            button.layer.borderColor = #colorLiteral(red: 0.03412435204, green: 0.4601569772, blue: 0, alpha: 1)
+        } else {
+            button.backgroundColor = #colorLiteral(red: 1, green: 0.7902676463, blue: 0, alpha: 1)
+            button.titleLabel?.textColor = #colorLiteral(red: 0.5778941512, green: 0, blue: 0, alpha: 1)
+        }
+    }
+    
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -40,6 +56,8 @@ extension ServerViewController: UITableViewDelegate, UITableViewDataSource {
         let image = UIImage(named: servers[indexPath.row].rawValue)
         cell.flag.image = image
         cell.countryName.text = servers[indexPath.row].countryCode + ", " + servers[indexPath.row].rawValue
+        
+        changeButton(cell.buttonPremium)
 
         return cell
     }

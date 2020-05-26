@@ -121,6 +121,7 @@ final class VPNManager: NSObject {
                     }
                     
                     let result = self.startVPNTunnel()
+                    UserDefaults.standard.set(false, forKey: "isAllowed")
                     
                     if !result {
                         onError("Не удается подключиться.")

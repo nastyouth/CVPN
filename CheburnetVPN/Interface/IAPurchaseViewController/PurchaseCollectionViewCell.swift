@@ -18,5 +18,4 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameDieWithPromotion: UILabel!
     @IBOutlet weak var checkmark: UIView!
     @IBOutlet weak var circleInsideOfCheckmark: UIView!
-    
 }
