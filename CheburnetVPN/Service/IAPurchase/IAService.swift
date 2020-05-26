@@ -22,7 +22,6 @@ class IAService: NSObject {
     var productsPrice: [Float] = [] {
         didSet {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "priceAdded"), object: nil)
-            print("PurchaseTest in Service, in didSet:", productsPrice)
         }
     }
     
@@ -58,7 +57,6 @@ extension IAService: SKProductsRequestDelegate {
 
     func validateProductIdentifiers() {
         let productsRequest = SKProductsRequest(productIdentifiers: [])
-
         self.requestProd = productsRequest;
         productsRequest.delegate = self
         productsRequest.start()
@@ -68,22 +66,39 @@ extension IAService: SKProductsRequestDelegate {
         self.products = response.products
         for product in response.products {
             print(product.localizedTitle)
-            
             if productsPrice.count < products.count {
                 productsPrice.append(Float(truncating: product.price))
-                print("PurchaseTest in Service, in productsRequest:", productsPrice, "products.count", products.count)
             }
         }
     }
+}
+
+fileprivate func setPurchase(date: Date?, productId: String?) {
+    var dateComponent = DateComponents()
+    
+    switch productId {
+    case IAProduct.weekPurchase.rawValue: dateComponent.setValue(1, for: .weekOfMonth)
+    case IAProduct.monthPurchase.rawValue: dateComponent.setValue(1, for: .month)
+    case IAProduct.yearPurchase.rawValue: dateComponent.setValue(1, for: .year)
+    default: break
+    }
+    
+    let expirationDate = Calendar.current.date(byAdding: dateComponent, to: date ?? Date())
+    UserDefaults.standard.set(expirationDate, forKey: "expDate")
+    print((#function), UserDefaults.standard.value(forKey: "expDate") ?? "")
 }
 
 extension IAService: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             print(transactions[0].error ?? "Ошибки транзакции нет!")
-            print(transaction .transactionState.status(), transaction.payment.productIdentifier)
+            print(#function, transaction .transactionState.status(), transaction.payment.productIdentifier)
+            
+            let date = transaction.transactionDate
+            
             switch transaction.transactionState {
             case .purchasing: break
+            case .purchased: setPurchase(date: date, productId: transaction.payment.productIdentifier)
             default: queue.finishTransaction(transaction)
             }
         }

@@ -103,7 +103,6 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
             self.nameFastestServer.text = server?.rawValue
         }
     }
-    
 
     func vpnStateChanged(status: NEVPNStatus) {
         switch status {
