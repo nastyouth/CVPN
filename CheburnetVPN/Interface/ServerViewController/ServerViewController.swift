@@ -39,7 +39,6 @@ class ServerViewController: UIViewController {
         if (date < expDate) && (VPNManager.shared.isDisconnected) {
             guard let server = selectedServer else { return }
             connectToSelectedServer(server)
-            print(#function, server)
         }
     }
     
@@ -51,12 +50,12 @@ class ServerViewController: UIViewController {
         if (date < expDate) && (!VPNManager.shared.isDisconnected) && (selectedServer == row) {
             button.backgroundColor = #colorLiteral(red: 0.2583432496, green: 0.6105024219, blue: 0, alpha: 1)
             button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-            button.setTitle("Подключен", for: .normal)
+            button.setTitle(LocalizationText.connected, for: .normal)
             button.layer.borderColor = #colorLiteral(red: 0.03412435204, green: 0.4601569772, blue: 0, alpha: 1)
         } else if (date < expDate) {
             button.backgroundColor = #colorLiteral(red: 1, green: 0.7913793325, blue: 0, alpha: 1)
             button.setTitleColor(#colorLiteral(red: 0.5778941512, green: 0, blue: 0, alpha: 1), for: .normal)
-            button.setTitle("Подключиться", for: .normal)
+            button.setTitle(LocalizationText.connect, for: .normal)
             button.layer.borderColor = #colorLiteral(red: 0.8470789194, green: 0.6418995261, blue: 0, alpha: 1)
         } else {
             button.backgroundColor = #colorLiteral(red: 1, green: 0.7902676463, blue: 0, alpha: 1)
@@ -91,6 +90,10 @@ extension ServerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ServerCell
         
+        cell.buttonPremium.addTarget(self,
+                                     action:#selector(buttonClicked),
+                                     for:.touchUpInside)
+        
         let image = UIImage(named: servers[indexPath.row].rawValue)
         cell.flag.image = image
         cell.countryName.text = servers[indexPath.row].countryCode + ", " + servers[indexPath.row].rawValue
@@ -98,6 +101,10 @@ extension ServerViewController: UITableViewDelegate, UITableViewDataSource {
         changeButton(cell.buttonPremium, indexPath.row)
 
         return cell
+    }
+    
+    @objc func buttonClicked(sender: UIButton) {
+        selectedServer = sender.tag
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

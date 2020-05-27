@@ -10,6 +10,7 @@
 "disconnect_to_VPN" = "Отключиться";
 "connecting_to_VPN" = "Подключение...";
 "disconnecting_to_VPN" = "Отключение...";
+"connected" = "Подключен";
 "purchase_week_type" = "Недельная";
 "purchase_month_type" = "Месячная";
 "purchase_year_type" = "Годовая";

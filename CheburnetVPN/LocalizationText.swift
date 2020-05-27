@@ -20,7 +20,7 @@ struct LocalizationText {
     
     static let nameDieWithPopularPromotion = NSLocalizedString("name_die_with_popular_promotion", comment: "")
     static let nameDieWithMostAdvantageousPromotion = NSLocalizedString("most_advantageous", comment: "")
-    
+    static let connected = NSLocalizedString("connected", comment: "")
     
     
     static let purchasePeriodWeek = NSLocalizedString("purchase_period_week", comment: "")

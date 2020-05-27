@@ -76,23 +76,12 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     }
     
     // MARK: - VPN connect
-    func checkIsAllowConnectToVPN() {
-        if !isAllowed {
-            segueToSetupYourVPNVC()
-            isAllowed = userDefaults.bool(forKey: "isAllowed")
-        } else {
-            userDefaults.set(true, forKey: "isAllowed")
-            isAllowed = userDefaults.bool(forKey: "isAllowed")
-        }
-    }
-    
     func fillServerData(_ server: Server?) {
         self.server = server?.server
         self.serverName = server?.rawValue
         
         if self.server != userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net" && self.server != nil {
             VPNManager.shared.disconnect()
-            checkIsAllowConnectToVPN()
         }
     }
     
@@ -106,6 +95,10 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
                     password: "nanonano")
                 
                 VPNManager.shared.connectIKEv2(config: config) { error in }
+                
+                isAllowed = true
+                userDefaults.set(true, forKey: "isAllowed")
+                isAllowed = self.userDefaults.bool(forKey: "isAllowed")
                 
                 config.saveToDefaults()
             }
@@ -152,6 +145,11 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
                 self.userDefaults.set(false, forKey: "isAllowed")
                 self.isAllowed = self.userDefaults.bool(forKey: "isAllowed")
             }
+            
+            isAllowed = true
+            userDefaults.set(true, forKey: "isAllowed")
+            isAllowed = self.userDefaults.bool(forKey: "isAllowed")
+            
             config.saveToDefaults()
         } else {
             VPNManager.shared.disconnect()

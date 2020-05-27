@@ -7,6 +7,7 @@
 */
 
 "connect_to_VPN" = "Verbinden Sie";
+"connected" = "Angeschlossen";
 "disconnect_to_VPN" = "Verbindung trennen";
 "connecting_to_VPN" = "Verbinden...";
 "disconnecting_to_VPN" = "Abschalten...";

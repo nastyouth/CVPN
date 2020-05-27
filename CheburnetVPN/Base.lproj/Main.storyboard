@@ -275,7 +275,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isq-ag-kYa" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isq-ag-kYa" customClass="customButton" customModule="CheburnetVPN" customModuleProvider="target">
                                                     <rect key="frame" x="257.5" y="10" width="102.5" height="25"/>
                                                     <color key="backgroundColor" red="0.96798652409999997" green="0.80340069530000002" blue="0.2742965221" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
