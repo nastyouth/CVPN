@@ -19,8 +19,7 @@ class SetupYourVPNViewController: UIViewController {
                 server: "dev0.4ebur.net",
                 account: "nano",
                 password: "nanonano")
-            VPNManager.shared.connectIKEv2(config: config) { error in
-            }
+            VPNManager.shared.connectIKEv2(config: config) { error in }
             config.saveToDefaults()
         } else {
             VPNManager.shared.disconnect()

@@ -18,8 +18,9 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
     @IBOutlet weak var nameFastestServer: UILabel!
     
     var server: String?
+    var serverName: String?
     
-    var isAllowed: Bool = false
+    var isAllowed: Bool = true
     let userDefaults = UserDefaults.standard
     var animationImages = [UIImage]()
     
@@ -28,11 +29,7 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         vpnStateChanged(status: VPNManager.shared.status)
         VPNManager.shared.statusEvent.attach(self, ViewController.vpnStateChanged)
         fillingAnimationImagesArray()
-        
-        //FIXME
-        server = userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net"
-        self.flagImage.image = UIImage(named: self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "")
-        self.nameFastestServer.text = self.userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? ""
+        setupUserDefaults()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,6 +37,13 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
             let destanationVC = segue.destination as? ServerViewController
             destanationVC?.delegate = self
         }
+    }
+    
+    func setupUserDefaults() {
+        server = userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net"
+        serverName = userDefaults.value(forKey: Configuration.SERVERNAME_KEY) as? String ?? "Los Angeles"
+        self.flagImage.image = UIImage(named: serverName ?? "Los Angeles")
+        self.nameFastestServer.text = serverName ?? "Los Angeles"
     }
     
     func segueToSetupYourVPNVC() {
@@ -59,6 +63,8 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         
         CATransaction.setCompletionBlock({
             self.checkEndConnection()
+            self.flagImage.image = UIImage(named: self.serverName ?? "Los Angeles")
+            self.nameFastestServer.text = self.serverName ?? "Los Angeles"
         })
         
         connectImageView.animationImages = imageArray as? [UIImage]
@@ -74,6 +80,19 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
         if !isAllowed {
             segueToSetupYourVPNVC()
             isAllowed = userDefaults.bool(forKey: "isAllowed")
+        } else {
+            userDefaults.set(true, forKey: "isAllowed")
+            isAllowed = userDefaults.bool(forKey: "isAllowed")
+        }
+    }
+    
+    func fillServerData(_ server: Server?) {
+        self.server = server?.server
+        self.serverName = server?.rawValue
+        
+        if self.server != userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net" && self.server != nil {
+            VPNManager.shared.disconnect()
+            checkIsAllowConnectToVPN()
         }
     }
     
@@ -86,30 +105,10 @@ class ViewController: UIViewController, ServerViewControllerDelegate {
                     account: "nano",
                     password: "nanonano")
                 
-                if !isAllowed {
-                    segueToSetupYourVPNVC()
-                }
+                VPNManager.shared.connectIKEv2(config: config) { error in }
                 
-                VPNManager.shared.connectIKEv2(config: config) { error in
-                    self.isAllowed = false
-                    self.userDefaults.set(false, forKey: "isAllowed")
-                    self.isAllowed = self.userDefaults.bool(forKey: "isAllowed")
-                }
                 config.saveToDefaults()
             }
-        }
-    }
-    
-    func fillServerData(_ server: Server?) {
-        self.server = server?.server
-        
-        if self.server != userDefaults.value(forKey: Configuration.SERVER_KEY) as? String ?? "dev0.4ebur.net" && self.server != nil {
-            VPNManager.shared.disconnect()
-        }
-        
-        DispatchQueue.main.async {
-            self.flagImage.image = UIImage(named: server?.rawValue ?? "USA")
-            self.nameFastestServer.text = server?.rawValue
         }
     }
 

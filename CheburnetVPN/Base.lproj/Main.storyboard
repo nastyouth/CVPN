@@ -217,7 +217,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="XAc-TF-970" kind="show" id="jPe-Ua-Pls"/>
+                                    <segue destination="XAc-TF-970" kind="show" identifier="segueToIAPurchase" id="jPe-Ua-Pls"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="akn-oP-170">
@@ -298,7 +298,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <segue destination="XAc-TF-970" kind="show" id="nLg-hx-3Cc"/>
+                                                        <action selector="buttonPremiumAction:" destination="Rgj-lU-QPH" eventType="touchUpInside" id="RJk-ob-fea"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1071,7 +1071,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXn-7C-aIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ARf-hd-fmc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1477.5999999999999" y="115.59220389805098"/>
+            <point key="canvasLocation" x="1468" y="116"/>
         </scene>
     </scenes>
     <resources>
@@ -1087,6 +1087,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nLg-hx-3Cc"/>
+        <segue reference="jPe-Ua-Pls"/>
     </inferredMetricsTieBreakers>
 </document>
